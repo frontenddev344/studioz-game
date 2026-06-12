@@ -2531,31 +2531,25 @@
 
     <div id="ageVerification" class="age-modal">
         <div class="age-modal-content">
-    
+
             <img src="./assets/images/logo.png" alt="Logo" class="age-logo">
-    
+
             <h2 class="age_title mb-3">Age Verification</h2>
-    
+
             <p>
                 To proceed, please confirm that you meet the minimum age requirement for accessing this website.
             </p>
-    
-            <input
-                type="number"
-                id="userAge"
-                min="1"
-                max="120"
-                placeholder="Enter your age"
-                class="age-input">
-    
-            <p id="ageError" class="age-error"></p>
-    
+
+            <input type="number" id="userAge" min="1" max="120" placeholder="Enter your age" class="age-input">
+
+            <p id="ageError" class="age-error mb-3"></p>
+
             <div class="age-actions">
                 <button id="verifyAge" class="butns">
                     Verify Age
                 </button>
             </div>
-    
+
         </div>
     </div>
 
@@ -2610,40 +2604,60 @@
         }
     </script>
     <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("ageVerification");
-    const verifyBtn = document.getElementById("verifyAge");
-    const ageInput = document.getElementById("userAge");
-    const error = document.getElementById("ageError");
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("ageVerification");
+            const verifyBtn = document.getElementById("verifyAge");
+            const ageInput = document.getElementById("userAge");
+            const error = document.getElementById("ageError");
 
-    // Already verified during this browser session
-    if (sessionStorage.getItem("ageVerified") === "true") {
-        modal.style.display = "none";
-        return;
-    }
+            // Hide error initially
+            error.style.display = "none";
 
-    modal.style.display = "flex";
+            // Already verified during this browser session
+            if (sessionStorage.getItem("ageVerified") === "true") {
+                modal.style.display = "none";
+                return;
+            }
 
-    verifyBtn.addEventListener("click", () => {
-        const age = parseInt(ageInput.value, 10);
+            modal.style.display = "flex";
 
-        if (!age || age < 1) {
-            error.textContent = "Please enter a valid age.";
-            return;
-        }
+            function showError(message) {
+                error.textContent = message;
+                error.style.display = "block";
+            }
 
-        if (age < 18) {
-            error.textContent =
-                "You must be at least 18 years old to access this website.";
-            return;
-        }
+            function clearError() {
+                error.textContent = "";
+                error.style.display = "none";
+            }
 
-        // Remember for this session only
-        sessionStorage.setItem("ageVerified", "true");
+            function verifyAge() {
+                clearError();
 
-        modal.style.display = "none";
-    });
-});
+                const age = parseInt(ageInput.value.trim(), 10);
+
+                if (isNaN(age) || age < 1) {
+                    showError("Please enter a valid age.");
+                    return;
+                }
+
+                if (age < 18) {
+                    showError("You do not meet the minimum age requirement to access this website.");
+                    return;
+                }
+
+                sessionStorage.setItem("ageVerified", "true");
+                modal.style.display = "none";
+            }
+
+            verifyBtn.addEventListener("click", verifyAge);
+
+            ageInput.addEventListener("keypress", (e) => {
+                if (e.key === "Enter") {
+                    verifyAge();
+                }
+            });
+        });
     </script>
 
     <script src="./assets/js/aos.js"></script>

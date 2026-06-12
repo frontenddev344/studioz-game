@@ -6011,10 +6011,10 @@ ul.features_list li {
 }
 
 .age-error {
+    display: none;
     color: var(--danger);
-    min-height: 20px;
-    margin-bottom: 1rem;
     font-size: 0.9rem;
+    margin-top: 10px;
 }
 .butns {
     width: 100%;
