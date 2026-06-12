@@ -178,7 +178,7 @@
     }
 
     .age-logo {
-        width: 90px;
+        width: 150px;
         margin-bottom: 16px;
     }
 
@@ -278,9 +278,6 @@
         border-radius: 18px;
     }
 
-    .age-logo {
-        width: 75px;
-    }
 
     .age-modal-content h2 {
         font-size: 1.5rem;
@@ -321,9 +318,6 @@
         padding: 20px 16px;
     }
 
-    .age-logo {
-        width: 65px;
-    }
 
     .age-modal-content h2 {
         font-size: 1.3rem;
