@@ -2757,7 +2757,72 @@ video {
 .site-footer .footer-bottom a {
     color: var(--accent-hover) !important;
 }
+.footer-disclaimer {
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
 
+.footer-disclaimer h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-family: var(--font-heading);
+}
+
+.footer-disclaimer p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    text-align: center !important;
+}
+
+.responsible-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.responsible-badges span {
+    background: rgba(0, 208, 132, 0.1);
+    border: 1px solid rgba(0, 208, 132, 0.3);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.age-icon {
+    margin-bottom: 15px;
+}
+
+.age-icon img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+@media(max-width:768px){
+    .footer-disclaimer{
+        padding:20px;
+    }
+
+    .responsible-badges{
+        gap:8px;
+    }
+
+    .responsible-badges span{
+        padding:6px 12px;
+        font-size:12px;
+    }
+}
 /* Footer CSS End  */
 
 
