@@ -5403,7 +5403,7 @@ ul.features_list li {
 }
 
 .last-update-content p a {
-    color: #eb592a;
+    color: var(--accent);
 }
 
 .last-update-content p a:hover {
