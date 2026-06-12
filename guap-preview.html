@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Guap Preview – Survive a Deadly Casino in This Wild Co-op Roguelike</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-container">
+                <button class="menu-toggle" id="menuOpenBtn" aria-label="Open Menu">
+                    <img src="./assets/images/menu.png" alt="menu_btn">
+                </button>
+                <nav class="desktop-nav nav-left">
+                    <a href="./news" class="nav-item">News</a>
+                    <a href="./reviews" class="nav-item">Reviews</a>
+                    <a href="./articles" class="nav-item">Articles</a>
+                    <a href="./walkthroughs" class="nav-item">Walkthroughs</a>
+                </nav>
+                <div class="brand-logo">
+                    <a href="./">
+                        <img src="./assets/images/logo.png" alt=" Logo">
+                    </a>
+                </div>
+                <nav class="desktop-nav nav-right">
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Casino Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="casino-games">Free Slots</a>
+                                        <a href="best-casino-apps">Best Casino Apps</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">Aviator Casinos</a>
+                                    <a href="#">Craps Casinos</a>
+                                    <a href="#">Crash Casinos</a>
+                                    <a href="#">Fish Game Casinos</a>
+                                    <a href="#">Plinko Casinos</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="casino-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Play Free Slots with No Download Required 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-casino-apps">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Casino Apps</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Slot Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="slot-games">Classic Slots</a>
+                                          <a href="best-video-slots-for-2026">Video Slots</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">High RTP Slots</a>
+                                    <a href="#">Penny Slots</a>
+                                    <a href="#">Megaways System</a>
+                                    <a href="#">Fruit Machines</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="slot-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-video-slots-for-2026">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Video Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about-us" class="nav-item">About Us</a>
+                </nav>
+                <button class="search-toggle-btn" id="searchExpandBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+                <div class="search-overlay-bar" id="searchBarContainer">
+                    <div class="search-bar-inner">
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-field-icon"></i>
+                            <input type="text" id="searchInput" placeholder="Search your Adventure Game..."
+                                autocomplete="off">
+                        </div>
+                        <button class="search-cancel-btn" id="searchCancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-panel-view active" id="mobileMainPanel">
+            <div class="mobile-menu-header">
+                <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">
+                    <img src="./assets/images/close.png" alt="close_btn">
+                </button>
+                <div class="mobile-menu-logo">
+                    <img src="./assets/images/logo.png" alt="Adventure Gamers Logo">
+                </div>
+                <button class="search-toggle-btn" id="mobileSearchBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+            </div>
+
+            <nav class="mobile-nav-links">
+                <a href="./news" class="mobile-link">News</a>
+                <a href="./reviews" class="mobile-link">Reviews</a>
+                <a href="articles" class="mobile-link">Articles</a>
+                <a href="walkthroughs" class="mobile-link">Walkthroughs</a>
+
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileCasinoMenu">
+                    Casino Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileSlotsMenu">
+                    Slot Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <a href="about-us" class="mobile-link">About Us</a>
+            </nav>
+        </div>
+
+        <div class="mobile-panel-view" id="mobileCasinoMenu">
+            <div class="mobile-menu-header sub-panel-header">
+
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Casino Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="casino-games">Free Slots</a>
+                     <a href="best-casino-apps">Best Casino Apps</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">Aviator Casinos</a>
+                    <a href="#">Craps Casinos</a>
+                    <a href="#">Crash Casinos</a>
+                    <a href="#">Fish Game Casinos</a>
+                    <a href="#">Plinko Casinos</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="casino-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Play Free Slots with No Download Required 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-casino-apps">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Casino Apps</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-panel-view" id="mobileSlotsMenu">
+            <div class="mobile-menu-header sub-panel-header">
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Slot Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="slot-games">Classic Slots</a>
+                          <a href="best-video-slots-for-2026">Video Slots</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">High RTP Slots</a>
+                    <a href="#">Penny Slots</a>
+                    <a href="#">Megaways System</a>
+                    <a href="#">Fruit Machines</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="slot-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-video-slots-for-2026">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Video Slots for 2026</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Banner Start -->
+    <section class="hero-banner-section sub_banner">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-map-card" style="background-image: url(./assets/images/guap_preview.jpg);">
+                    <div class="notch-svg-wrapper top-right-step">
+                        <svg width="140" height="60" viewBox="0 0 107 45" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0H107V45C107 43.1 107.52 33.34 90.5 33.72H35C25.49 33.72 17.75 26.4 17.51 17.29L17.5 16.42C17.26 7.31 9.52 0 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="notch-svg-wrapper bottom-left-step">
+                        <svg width="140" height="60" viewBox="0 0 107 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0V46H107C97.35 46 89.6 38.52 89.36 29.21L89.35 28.32C89.11 19.01 81.37 11.53 71.85 11.53H16.37C-0.65 11.92 0 1.94 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="hero-card-content">
+                        <h1 class="hero-title">Guap Preview – Survive a Deadly Casino in This Wild Co-op Roguelike</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+
+    <!-- Articles Details Content Start -->
+    <section class="article-detail-page py-7">
+        <div class="container">
+            <div class="article-detail-page__container">
+                <div class="article-detail-page__intro">
+                    <p>
+                        What happens when a gambling simulator collides with chaotic co-op
+                        survival gameplay? That's exactly the idea behind Guap, a fast-paced
+                        multiplayer roguelike where players must gamble their way out of an
+                        increasingly dangerous casino facility.
+                    </p>
+                    <p>
+                        Instead of exploring abandoned planets or collecting scrap, you and
+                        your teammates are thrown into a high-risk environment where every
+                        spin, card draw, and dice roll could either save the group or ruin
+                        the entire run.
+                    </p>
+                    <p>
+                        Designed around tension, teamwork, and unpredictable outcomes,
+                        Guap transforms casino games into survival mechanics. Each in-game
+                        day comes with a financial target your team must reach before time
+                        runs out.
+                    </p>
+                </div>               
+
+                <div class="article-detail-page__highlight">
+
+                    <p>
+                        One bad gamble can wipe out the entire team's progress, making every
+                        decision feel meaningful and dangerous.
+                    </p>
+
+                </div>
+
+                <!-- SECTION -->
+
+                <div class="article-detail-page__section">
+
+                    <h2 class="article-detail-page__heading">
+                        A Co-op Casino Survival Experience
+                    </h2>
+
+                    <p>
+                        At its core, Guap is a multiplayer roguelike built for up to four
+                        players. The game focuses heavily on risk management, communication,
+                        and adapting to random events.
+                    </p>
+
+                    <p>
+                        Unlike traditional casino simulators, Guap adds survival pressure
+                        to every decision. Players aren't simply chasing profits—they're
+                        trying to stay alive long enough to escape the facility.
+                    </p>
+
+                    <p>
+                        The atmosphere combines neon-lit casino visuals with dark,
+                        unsettling environments that create a constant sense of tension.
+                    </p>
+
+                </div>
+
+                <!-- SECTION -->
+
+                <div class="article-detail-page__section">
+
+                    <h2 class="article-detail-page__heading">
+                        Dynamic Gameplay and Daily Challenges
+                    </h2>
+
+                    <p>
+                        Every in-game day introduces randomized mechanics and game
+                        rotations. This keeps matches unpredictable and prevents players
+                        from relying on a single strategy.
+                    </p>
+
+                    <p>
+                        Some rounds may focus heavily on card-based games, while others
+                        push players toward dangerous high-risk betting systems with
+                        larger payouts.
+                    </p>
+
+                    <h3 class="article-detail-page__subheading">
+                        Players Must Carefully Decide:
+                    </h3>
+
+                    <ul class="article-detail-page__list">
+
+                        <li>When to cash out</li>
+
+                        <li>Which teammate takes the risk</li>
+
+                        <li>How much money to pool together</li>
+
+                        <li>Whether to play safely or go all-in</li>
+
+                    </ul>
+
+                </div>
+
+                <!-- GAMES -->
+
+                <div class="article-detail-page__section">
+
+                    <h2 class="article-detail-page__heading">
+                        Casino Games Available in Guap
+                    </h2>
+
+                    <div class="article-detail-page__games">
+
+                        <div class="article-detail-page__game">
+                            <h4>Blackjack</h4>
+                            <p>Beat the dealer without exceeding the limit.</p>
+                        </div>
+
+                        <div class="article-detail-page__game">
+                            <h4>Roulette</h4>
+                            <p>Bet on numbers, colours, or combinations.</p>
+                        </div>
+
+                        <div class="article-detail-page__game">
+                            <h4>Mines</h4>
+                            <p>One mistake instantly ends the round.</p>
+                        </div>
+
+                        <div class="article-detail-page__game">
+                            <h4>Plinko</h4>
+                            <p>Drop chips through multiplier boards.</p>
+                        </div>
+
+                        <div class="article-detail-page__game">
+                            <h4>Limbo</h4>
+                            <p>Set your multiplier and test your luck.</p>
+                        </div>
+
+                        <div class="article-detail-page__game">
+                            <h4>Sic-Bo</h4>
+                            <p>Dice-based betting with varied outcomes.</p>
+                        </div>
+
+                        <div class="article-detail-page__game">
+                            <h4>Rugged</h4>
+                            <p>Cash out before the value collapses.</p>
+                        </div>
+
+                        <div class="article-detail-page__game">
+                            <h4>Unbox</h4>
+                            <p>Huge rewards with extremely low odds.</p>
+                        </div>
+
+                        <div class="article-detail-page__game">
+                            <h4>The Golden Dome</h4>
+                            <p>Defense-inspired betting gameplay.</p>
+                        </div>
+
+                        <div class="article-detail-page__game">
+                            <h4>F-Racer</h4>
+                            <p>Bet on chaotic frog races.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="article-detail-page__section">
+                    <h2 class="article-detail-page__heading">
+                        Visual Style and Atmosphere
+                    </h2>
+                    <p>
+                        Guap leans heavily into a dark neon casino aesthetic mixed with
+                        psychological tension. Flashing lights, distorted audio, crowded
+                        tables, and sudden environmental changes create a stressful but
+                        exciting atmosphere.
+                    </p>
+                    <p>
+                        The first-person presentation helps make every gamble feel personal,
+                        especially during high-stakes moments when teams are risking
+                        everything to survive another round.
+                    </p>
+                </div>
+
+                <div class="article-detail-page__info-card">
+                    <h3>Developer Information</h3>
+                    <p>
+                        Guap is being developed by indie studio BoMassy, with a strong
+                        focus on replayability, multiplayer chaos, and unpredictable
+                        roguelike systems.
+                    </p>
+                </div>
+
+                <!-- RELEASE -->
+
+                <div class="article-detail-page__info-card">
+                    <h3>Release Date & Platform</h3>
+                    <p>
+                        Guap is currently planned for release on
+                        <strong>March 6, 2026</strong>
+                        and will launch on
+                        <strong>PC via Steam</strong>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Articles Details Content End -->
+
+    <!-- FAQ Section Start -->
+    <section class="faq-section bg_dark py-7">
+        <div class="container">
+
+            <div class="w-lg-50 mx-auto">
+                <h2 class="section_heading mb-5">Frequently Asked Questions</h2>
+
+                <div class="accordion accordion-flush" id="accordionExample">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                <h3>Is Guap multiplayer only? </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                No. While the game is designed primarily around co-op gameplay, solo play options are
+                                also expected to be available.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                <h3>How many players can join a session? </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Guap supports up to four players in online co-op matches.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                <h3>Is every run different? </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Yes. Randomized daily events, modifiers, and gambling game rotations make each session
+                                unique.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                <h3>Is Guap difficult? </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                The game is designed to be challenging, especially during later stages where debt requirements and risk levels increase significantly.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                <h3>Does Guap include microtransactions?                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                At the moment, the developers have not confirmed any microtransaction systems.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- FAQ Section End -->
+
+     <!-- Footer Start -->
+    <footer class="site-footer pt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href="./" class="bg_center_contain"></a>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li><a href="./news">News</a></li>
+                            <li><a href="./reviews">Reviews</a></li>
+                            <li><a href="articles">Articles</a></li>
+                            <li><a href="./walkthroughs">Walkthroughs</a></li>
+                            <li><a href="./about-us">About US</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Customer Support
+                        </h3>
+                        <ul>
+                            <li><a href="./casino-games">Casino Games</a></li>
+                            <li><a href="./slot-games">Slot Games</a></li>                         
+                            <li><a href="./terms-conditions">Terms & Conditions </a></li>
+                            <li><a href="./privacy-policy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                      <div class="footer-contact">
+                        <h3>
+                            Get in Touch
+                        </h3>
+                        <p class="mb-3">
+                            Have questions about our products? We’re here to help.
+                        </p>                       
+                        <p class="text_theme mb-2">
+                            Phone
+                        </p>
+                        <p class="mb-3 text_white">
+                            <a href="tel:+17788970544">+1 778-897-0544</a>
+                        </p>
+                        <p class="text_theme mb-2">
+                            Address
+                        </p>
+                        <p class="text_white">
+                            <a href="https://maps.app.goo.gl/bbmBLiC5b71tKLVC6">225 W 8th Ave, Suite 300
+                                Vancouver, BC V5Y 1N3
+                                Canada</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+               <p>Copyright © 2026 <a class="text_theme" href="./"> studioz-game.com </a> All Rights Reserved.</p>
+                    <div class="ssl_logo">
+                        <div class="ssl_logo_inner bg-contain" style="background-image: url(assets/images/ssl.png);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+
+
+    <button id="topBtn" class="show">
+        ↑
+    </button>
+
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/filters-data.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/render.js"></script>
+    <script src="./assets/js/filters.js"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Privacy Policy</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-container">
+                <button class="menu-toggle" id="menuOpenBtn" aria-label="Open Menu">
+                    <img src="./assets/images/menu.png" alt="menu_btn">
+                </button>
+                <nav class="desktop-nav nav-left">
+                    <a href="./news" class="nav-item">News</a>
+                    <a href="./reviews" class="nav-item">Reviews</a>
+                    <a href="./articles" class="nav-item">Articles</a>
+                    <a href="./walkthroughs" class="nav-item">Walkthroughs</a>
+                </nav>
+                <div class="brand-logo">
+                    <a href="./">
+                        <img src="./assets/images/logo.png" alt=" Logo">
+                    </a>
+                </div>
+                <nav class="desktop-nav nav-right">
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Casino Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="casino-games">Free Slots</a>
+                                        <a href="best-casino-apps">Best Casino Apps</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">Aviator Casinos</a>
+                                    <a href="#">Craps Casinos</a>
+                                    <a href="#">Crash Casinos</a>
+                                    <a href="#">Fish Game Casinos</a>
+                                    <a href="#">Plinko Casinos</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="casino-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Play Free Slots with No Download Required 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-casino-apps">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Casino Apps</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Slot Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="slot-games">Classic Slots</a>
+                                          <a href="best-video-slots-for-2026">Video Slots</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">High RTP Slots</a>
+                                    <a href="#">Penny Slots</a>
+                                    <a href="#">Megaways System</a>
+                                    <a href="#">Fruit Machines</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="slot-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-video-slots-for-2026">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Video Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about-us" class="nav-item">About Us</a>
+                </nav>
+                <button class="search-toggle-btn" id="searchExpandBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+                <div class="search-overlay-bar" id="searchBarContainer">
+                    <div class="search-bar-inner">
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-field-icon"></i>
+                            <input type="text" id="searchInput" placeholder="Search your Adventure Game..."
+                                autocomplete="off">
+                        </div>
+                        <button class="search-cancel-btn" id="searchCancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-panel-view active" id="mobileMainPanel">
+            <div class="mobile-menu-header">
+                <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">
+                    <img src="./assets/images/close.png" alt="close_btn">
+                </button>
+                <div class="mobile-menu-logo">
+                    <img src="./assets/images/logo.png" alt="Adventure Gamers Logo">
+                </div>
+                <button class="search-toggle-btn" id="mobileSearchBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+            </div>
+
+            <nav class="mobile-nav-links">
+                <a href="./news" class="mobile-link">News</a>
+                <a href="./reviews" class="mobile-link">Reviews</a>
+                <a href="articles" class="mobile-link">Articles</a>
+                <a href="walkthroughs" class="mobile-link">Walkthroughs</a>
+
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileCasinoMenu">
+                    Casino Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileSlotsMenu">
+                    Slot Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <a href="about-us" class="mobile-link">About Us</a>
+            </nav>
+        </div>
+
+        <div class="mobile-panel-view" id="mobileCasinoMenu">
+            <div class="mobile-menu-header sub-panel-header">
+
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Casino Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="casino-games">Free Slots</a>
+                     <a href="best-casino-apps">Best Casino Apps</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">Aviator Casinos</a>
+                    <a href="#">Craps Casinos</a>
+                    <a href="#">Crash Casinos</a>
+                    <a href="#">Fish Game Casinos</a>
+                    <a href="#">Plinko Casinos</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="casino-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Play Free Slots with No Download Required 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-casino-apps">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Casino Apps</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-panel-view" id="mobileSlotsMenu">
+            <div class="mobile-menu-header sub-panel-header">
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Slot Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="slot-games">Classic Slots</a>
+                          <a href="best-video-slots-for-2026">Video Slots</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">High RTP Slots</a>
+                    <a href="#">Penny Slots</a>
+                    <a href="#">Megaways System</a>
+                    <a href="#">Fruit Machines</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="slot-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-video-slots-for-2026">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Video Slots for 2026</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+       
+    <!-- Banner Start -->
+    <section class="hero-banner-section sub_banner">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-map-card" style="background-image: url(./assets/images/privacy_banner.jpg);">
+                    <div class="notch-svg-wrapper top-right-step">
+                        <svg width="140" height="60" viewBox="0 0 107 45" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0H107V45C107 43.1 107.52 33.34 90.5 33.72H35C25.49 33.72 17.75 26.4 17.51 17.29L17.5 16.42C17.26 7.31 9.52 0 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="notch-svg-wrapper bottom-left-step">
+                        <svg width="140" height="60" viewBox="0 0 107 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0V46H107C97.35 46 89.6 38.52 89.36 29.21L89.35 28.32C89.11 19.01 81.37 11.53 71.85 11.53H16.37C-0.65 11.92 0 1.94 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="hero-card-content">
+                        <h1 class="hero-title">Privacy Policy</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+    <!-- Footer Pages Content Start -->
+    <section class="last-update">
+        <div class="container">
+            <div class="last-update-content-wrap">            
+                <div class="last-update-content">
+                    <p>
+                        At <strong>Studioz Game</strong>, we value transparency about how information is collected and
+                        used.
+                        This Privacy Policy explains what data may be gathered when you visit our website, how that
+                        information helps us improve our services, and the choices available to you regarding your data.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h2>Information We Collect</h2>
+                    <p>
+                        Certain information may be provided voluntarily when you contact us, subscribe to updates,
+                        participate in surveys, or interact with website features. Depending on the activity, this may
+                        include your name, email address, or other details you choose to share.
+                    </p>
+                    <p>
+                        We may also collect limited technical information automatically, such as browser type, device
+                        information, IP address, and website usage statistics.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h3>How We Use Your Information</h3>
+                    <p>
+                        Information collected through Studioz Game may be used to enhance website functionality, improve
+                        user
+                        experience, respond to inquiries, deliver requested content, and better understand how visitors
+                        interact with our platform.
+                    </p>
+                    <p>
+                        Where permission has been provided, we may also send newsletters, updates, or other
+                        communications
+                        related to our content and services.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h4>Cookies & Tracking Technologies</h4>
+                    <p>
+                        Studioz Game uses cookies and similar technologies to remember user preferences, analyze traffic
+                        patterns, and improve website performance. These technologies help us understand how visitors
+                        use
+                        our site and enable certain features to function properly.
+                    </p>
+                    <p>
+                        Most browsers allow you to control or disable cookies through their settings. However, some
+                        website
+                        features may not function as intended if cookies are restricted.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h4>Data Protection & Security</h4>
+                    <p>
+                        We implement reasonable administrative, technical, and organizational safeguards designed to
+                        help
+                        protect personal information from unauthorized access, misuse, alteration, or disclosure.
+                    </p>
+                    <p>
+                        While we strive to maintain strong security practices, no online platform can guarantee absolute
+                        protection of data transmitted over the internet.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h4>Information Sharing</h4>
+                    <p>
+                        Studioz Game does not sell or rent personal information to third parties. Information may only be
+                        shared when necessary to operate our website, comply with legal obligations, enforce our
+                        policies,
+                        or protect the rights, safety, and security of our users and services.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h4>Third-Party Websites</h4>
+                    <p>
+                        Our website may contain links to external websites, services, or resources. These third-party
+                        platforms operate independently and maintain their own privacy practices.
+                    </p>
+                    <p>
+                        We encourage users to review the privacy policies of any external websites they visit, as
+                        Studioz Game
+                        is not responsible for their content or data handling activities.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h4>Email Communications</h4>
+                    <p>
+                        If you subscribe to receive updates from Studioz Game, you may occasionally receive emails
+                        containing
+                        news, announcements, or relevant content. You may opt out of these communications at any time by
+                        using the unsubscribe option included in our emails.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h4>User Consent</h4>
+                    <p>
+                        By accessing and using Studioz Game, you acknowledge and agree to the practices described in this
+                        Privacy Policy. Continued use of the website signifies acceptance of any applicable updates.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h4>Data Retention</h4>
+                    <p>
+                        Information is retained only for as long as reasonably necessary to fulfill the purposes
+                        described
+                        in this policy, support legitimate business operations, resolve disputes, or meet legal and
+                        regulatory requirements.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h4>Policy Updates</h4>
+                    <p>
+                        We may revise this Privacy Policy periodically to reflect operational, legal, or technological
+                        changes. Updated versions will be posted on this page, and the effective date will be revised
+                        accordingly.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h4>Contact Us</h4>
+                    <p>
+                        If you have questions, concerns, or requests related to this Privacy Policy or the handling of
+                        your
+                        information, please contact the Studioz Game support team through our Contact page.
+                    </p>
+                </div>
+
+                <div class="last-update-content">
+                    <h4>Your Privacy Matters at Studioz Game</h4>
+                    <p>
+                        We are committed to maintaining a trustworthy environment where visitors can explore gaming
+                        content
+                        with confidence, knowing that their privacy is treated with care and respect.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer Pages Content End -->
+
+    <!-- Footer Start -->
+    <footer class="site-footer pt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href="./" class="bg_center_contain"></a>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li><a href="./news">News</a></li>
+                            <li><a href="./reviews">Reviews</a></li>
+                            <li><a href="articles">Articles</a></li>
+                            <li><a href="./walkthroughs">Walkthroughs</a></li>
+                            <li><a href="./about-us">About US</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Customer Support
+                        </h3>
+                        <ul>
+                            <li><a href="./casino-games">Casino Games</a></li>
+                            <li><a href="./slot-games">Slot Games</a></li>
+                            <li><a href="./terms-conditions">Terms & Conditions </a></li>
+                            <li><a href="./privacy-policy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                      <div class="footer-contact">
+                        <h3>
+                            Get in Touch
+                        </h3>
+                        <p class="mb-3">
+                            Have questions about our products? We’re here to help.
+                        </p>                       
+                        <p class="text_theme mb-2">
+                            Phone
+                        </p>
+                        <p class="mb-3 text_white">
+                            <a href="tel:+17788970544">+1 778-897-0544</a>
+                        </p>
+                        <p class="text_theme mb-2">
+                            Address
+                        </p>
+                        <p class="text_white">
+                            <a href="https://maps.app.goo.gl/bbmBLiC5b71tKLVC6">225 W 8th Ave, Suite 300
+                                Vancouver, BC V5Y 1N3
+                                Canada</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+               <p>Copyright © 2026 <a class="text_theme" href="./"> studioz-game.com </a> All Rights Reserved.</p>
+                    <div class="ssl_logo">
+                        <div class="ssl_logo_inner bg-contain" style="background-image: url(assets/images/ssl.png);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <button id="topBtn" class="show">
+        ↑
+    </button>
+
+
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/filters-data.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/render.js"></script>
+    <script src="./assets/js/filters.js"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>

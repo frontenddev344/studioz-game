@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Indiana Jones and the Great Circle – A Modern Adventure Worth Taking</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-container">
+                <button class="menu-toggle" id="menuOpenBtn" aria-label="Open Menu">
+                    <img src="./assets/images/menu.png" alt="menu_btn">
+                </button>
+                <nav class="desktop-nav nav-left">
+                    <a href="./news" class="nav-item">News</a>
+                    <a href="./reviews" class="nav-item">Reviews</a>
+                    <a href="./articles" class="nav-item">Articles</a>
+                    <a href="./walkthroughs" class="nav-item">Walkthroughs</a>
+                </nav>
+                <div class="brand-logo">
+                    <a href="./">
+                        <img src="./assets/images/logo.png" alt=" Logo">
+                    </a>
+                </div>
+                <nav class="desktop-nav nav-right">
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Casino Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="casino-games">Free Slots</a>
+                                        <a href="best-casino-apps">Best Casino Apps</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">Aviator Casinos</a>
+                                    <a href="#">Craps Casinos</a>
+                                    <a href="#">Crash Casinos</a>
+                                    <a href="#">Fish Game Casinos</a>
+                                    <a href="#">Plinko Casinos</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="casino-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Play Free Slots with No Download Required 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-casino-apps">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Casino Apps</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Slot Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="slot-games">Classic Slots</a>
+                                          <a href="best-video-slots-for-2026">Video Slots</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">High RTP Slots</a>
+                                    <a href="#">Penny Slots</a>
+                                    <a href="#">Megaways System</a>
+                                    <a href="#">Fruit Machines</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="slot-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-video-slots-for-2026">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Video Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about-us" class="nav-item">About Us</a>
+                </nav>
+                <button class="search-toggle-btn" id="searchExpandBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+                <div class="search-overlay-bar" id="searchBarContainer">
+                    <div class="search-bar-inner">
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-field-icon"></i>
+                            <input type="text" id="searchInput" placeholder="Search your Adventure Game..."
+                                autocomplete="off">
+                        </div>
+                        <button class="search-cancel-btn" id="searchCancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-panel-view active" id="mobileMainPanel">
+            <div class="mobile-menu-header">
+                <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">
+                    <img src="./assets/images/close.png" alt="close_btn">
+                </button>
+                <div class="mobile-menu-logo">
+                    <img src="./assets/images/logo.png" alt="Adventure Gamers Logo">
+                </div>
+                <button class="search-toggle-btn" id="mobileSearchBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+            </div>
+
+            <nav class="mobile-nav-links">
+                <a href="./news" class="mobile-link">News</a>
+                <a href="./reviews" class="mobile-link">Reviews</a>
+                <a href="articles" class="mobile-link">Articles</a>
+                <a href="walkthroughs" class="mobile-link">Walkthroughs</a>
+
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileCasinoMenu">
+                    Casino Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileSlotsMenu">
+                    Slot Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <a href="about-us" class="mobile-link">About Us</a>
+            </nav>
+        </div>
+
+        <div class="mobile-panel-view" id="mobileCasinoMenu">
+            <div class="mobile-menu-header sub-panel-header">
+
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Casino Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="casino-games">Free Slots</a>
+                     <a href="best-casino-apps">Best Casino Apps</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">Aviator Casinos</a>
+                    <a href="#">Craps Casinos</a>
+                    <a href="#">Crash Casinos</a>
+                    <a href="#">Fish Game Casinos</a>
+                    <a href="#">Plinko Casinos</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="casino-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Play Free Slots with No Download Required 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-casino-apps">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Casino Apps</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-panel-view" id="mobileSlotsMenu">
+            <div class="mobile-menu-header sub-panel-header">
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Slot Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="slot-games">Classic Slots</a>
+                          <a href="best-video-slots-for-2026">Video Slots</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">High RTP Slots</a>
+                    <a href="#">Penny Slots</a>
+                    <a href="#">Megaways System</a>
+                    <a href="#">Fruit Machines</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="slot-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-video-slots-for-2026">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Video Slots for 2026</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    <!-- Banner Start -->
+    <section class="hero-banner-section sub_banner">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-map-card" style="background-image: url(./assets/images/indiana_jones.jpg);">
+                    <div class="notch-svg-wrapper top-right-step">
+                        <svg width="140" height="60" viewBox="0 0 107 45" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0H107V45C107 43.1 107.52 33.34 90.5 33.72H35C25.49 33.72 17.75 26.4 17.51 17.29L17.5 16.42C17.26 7.31 9.52 0 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="notch-svg-wrapper bottom-left-step">
+                        <svg width="140" height="60" viewBox="0 0 107 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0V46H107C97.35 46 89.6 38.52 89.36 29.21L89.35 28.32C89.11 19.01 81.37 11.53 71.85 11.53H16.37C-0.65 11.92 0 1.94 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="hero-card-content">
+                        <h1 class="hero-title">Indiana Jones and the Great Circle – A Modern Adventure Worth Taking</h1>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+
+    <!-- Articles Details Content Start -->
+    <section class="article-detail-page py-7">
+        <div class="container">
+            <div class="article-detail-page__container">
+                <div class="article-detail-page__intro">
+                    <p>
+                        Indiana Jones and the Great Circle brings the legendary archaeologist back
+                        for a globe-spanning adventure filled with ancient mysteries, dangerous
+                        enemies, and forgotten secrets.
+                    </p>
+                
+                    <p>
+                        Set between the events of Raiders of the Lost Ark and The Last Crusade,
+                        the game follows Indy as he investigates a series of mysterious sites
+                        connected by a hidden pattern known as the Great Circle.
+                    </p>
+                
+                    <p>
+                        Combining cinematic storytelling, exploration, puzzle-solving, and action,
+                        the game captures everything fans love about the iconic franchise while
+                        introducing a fresh modern experience.
+                    </p>
+                </div>              
+
+                <div class="article-detail-page__highlight">
+
+                    <p>
+                        One bad gamble can wipe out the entire team's progress...
+                    </p>
+
+                </div>
+
+  
+                <div class="article-detail-page__section">
+
+                    <h2 class="article-detail-page__heading">
+                        A True Indiana Jones Adventure
+                    </h2>
+                
+                    <p>
+                        Rather than focusing purely on combat, The Great Circle places exploration
+                        and discovery at the heart of the experience.
+                    </p>
+                
+                    <p>
+                        Players travel across stunning locations, uncover ancient artifacts,
+                        decipher clues, and solve environmental puzzles inspired by classic
+                        archaeological adventures.
+                    </p>
+                
+                    <p>
+                        Every location feels handcrafted, encouraging curiosity and rewarding
+                        players who take the time to explore every corner.
+                    </p>
+                
+                </div>
+
+                
+
+                <div class="article-detail-page__section">
+
+                    <h2 class="article-detail-page__heading">
+                        Exploration, Puzzles, and Action
+                    </h2>
+                
+                    <p>
+                        The Great Circle balances exploration with cinematic action sequences,
+                        stealth encounters, and clever puzzle design.
+                    </p>
+                
+                    <p>
+                        Whether you're infiltrating enemy camps, navigating ancient tombs,
+                        or uncovering hidden chambers, the game constantly introduces new
+                        challenges and surprises.
+                    </p>
+                
+                    <h3 class="article-detail-page__subheading">
+                        Key Features:
+                    </h3>
+                
+                    <ul class="article-detail-page__list">
+                
+                        <li>Rich story-driven adventure</li>
+                        <li>Large environments to explore</li>
+                        <li>Creative environmental puzzles</li>
+                        <li>Cinematic action and stealth gameplay</li>
+                        <li>Authentic Indiana Jones atmosphere</li>
+                
+                    </ul>
+                
+                </div>
+
+                <!-- GAMES -->
+
+                <div class="article-detail-page__section">
+
+                    <h2 class="article-detail-page__heading">
+                        What Makes The Great Circle Special
+                    </h2>
+                
+                    <div class="article-detail-page__games">
+                
+                        <div class="article-detail-page__game">
+                            <h4>Exploration</h4>
+                            <p>Discover hidden tombs, ruins, and secret pathways.</p>
+                        </div>
+                
+                        <div class="article-detail-page__game">
+                            <h4>Puzzle Solving</h4>
+                            <p>Decode clues and ancient mechanisms.</p>
+                        </div>
+                
+                        <div class="article-detail-page__game">
+                            <h4>Stealth</h4>
+                            <p>Avoid enemies using clever distractions and timing.</p>
+                        </div>
+                
+                        <div class="article-detail-page__game">
+                            <h4>Combat</h4>
+                            <p>Use fists, gadgets, and Indy's famous whip.</p>
+                        </div>
+                
+                        <div class="article-detail-page__game">
+                            <h4>Storytelling</h4>
+                            <p>A cinematic narrative inspired by classic films.</p>
+                        </div>
+                
+                        <div class="article-detail-page__game">
+                            <h4>World Design</h4>
+                            <p>Beautifully detailed historical locations.</p>
+                        </div>
+                
+                    </div>
+                
+                </div>
+                <div class="article-detail-page__section">
+                    <h2 class="article-detail-page__heading">
+                        Visual Presentation and Atmosphere
+                    </h2>
+                
+                    <p>
+                        From ancient temples to bustling cities, every location is packed with
+                        environmental detail and cinematic flair.
+                    </p>
+                
+                    <p>
+                        The game successfully recreates the adventurous spirit of the Indiana
+                        Jones films through its music, visuals, and memorable set pieces.
+                    </p>
+                </div>
+
+                <div class="article-detail-page__info-card">
+                    <h3>Developer Information</h3>
+                    <p>
+                        Indiana Jones and the Great Circle was developed by MachineGames,
+                        the studio known for its acclaimed Wolfenstein series, in collaboration
+                        with Lucasfilm Games.
+                    </p>
+                </div>
+
+                <!-- RELEASE -->
+
+                <div class="article-detail-page__info-card">
+                    <h3>Release Date & Platform</h3>
+                    <p>
+                        Indiana Jones and the Great Circle is available on
+                        <strong>PC and Xbox Series X|S</strong>,
+                        delivering a cinematic adventure experience for modern platforms.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Articles Details Content End -->
+
+    <!-- FAQ Section Start -->
+    <section class="faq-section bg_dark py-7">
+        <div class="container">
+
+            <div class="w-lg-50 mx-auto">
+                <h2 class="section_heading mb-5">Frequently Asked Questions</h2>
+
+                <div class="accordion accordion-flush" id="accordionExample">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                <h3>Is Guap multiplayer only? </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                No. While the game is designed primarily around co-op gameplay, solo play options are
+                                also expected to be available.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                <h3>How many players can join a session? </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Guap supports up to four players in online co-op matches.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                <h3>Is every run different? </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Yes. Randomized daily events, modifiers, and gambling game rotations make each session
+                                unique.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                <h3>Is Guap difficult? </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                The game is designed to be challenging, especially during later stages where debt requirements and risk levels increase significantly.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                <h3>Does Guap include microtransactions?                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                At the moment, the developers have not confirmed any microtransaction systems.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- FAQ Section End -->
+
+     <!-- Footer Start -->
+    <footer class="site-footer pt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href="./" class="bg_center_contain"></a>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li><a href="./news">News</a></li>
+                            <li><a href="./reviews">Reviews</a></li>
+                            <li><a href="articles">Articles</a></li>
+                            <li><a href="./walkthroughs">Walkthroughs</a></li>
+                            <li><a href="./about-us">About US</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Customer Support
+                        </h3>
+                        <ul>
+                            <li><a href="./casino-games">Casino Games</a></li>
+                            <li><a href="./slot-games">Slot Games</a></li>                         
+                            <li><a href="./terms-conditions">Terms & Conditions </a></li>
+                            <li><a href="./privacy-policy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                      <div class="footer-contact">
+                        <h3>
+                            Get in Touch
+                        </h3>
+                        <p class="mb-3">
+                            Have questions about our products? We’re here to help.
+                        </p>                       
+                        <p class="text_theme mb-2">
+                            Phone
+                        </p>
+                        <p class="mb-3 text_white">
+                            <a href="tel:+17788970544">+1 778-897-0544</a>
+                        </p>
+                        <p class="text_theme mb-2">
+                            Address
+                        </p>
+                        <p class="text_white">
+                            <a href="https://maps.app.goo.gl/bbmBLiC5b71tKLVC6">225 W 8th Ave, Suite 300
+                                Vancouver, BC V5Y 1N3
+                                Canada</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+               <p>Copyright © 2026 <a class="text_theme" href="./"> studioz-game.com </a> All Rights Reserved.</p>
+                    <div class="ssl_logo">
+                        <div class="ssl_logo_inner bg-contain" style="background-image: url(assets/images/ssl.png);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+
+
+    <button id="topBtn" class="show">
+        ↑
+    </button>
+
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/filters-data.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/render.js"></script>
+    <script src="./assets/js/filters.js"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>

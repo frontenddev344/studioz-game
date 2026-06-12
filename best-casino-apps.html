@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Best Casino Apps</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-container">
+                <button class="menu-toggle" id="menuOpenBtn" aria-label="Open Menu">
+                    <img src="./assets/images/menu.png" alt="menu_btn">
+                </button>
+                <nav class="desktop-nav nav-left">
+                    <a href="./news" class="nav-item">News</a>
+                    <a href="./reviews" class="nav-item">Reviews</a>
+                    <a href="./articles" class="nav-item">Articles</a>
+                    <a href="./walkthroughs" class="nav-item">Walkthroughs</a>
+                </nav>
+                <div class="brand-logo">
+                    <a href="./">
+                        <img src="./assets/images/logo.png" alt=" Logo">
+                    </a>
+                </div>
+                <nav class="desktop-nav nav-right">
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Casino Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="casino-games">Free Slots</a>
+                                        <a href="best-casino-apps">Best Casino Apps</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">Aviator Casinos</a>
+                                    <a href="#">Craps Casinos</a>
+                                    <a href="#">Crash Casinos</a>
+                                    <a href="#">Fish Game Casinos</a>
+                                    <a href="#">Plinko Casinos</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="casino-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Play Free Slots with No Download Required 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-casino-apps">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Casino Apps</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Slot Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="slot-games">Classic Slots</a>
+                                          <a href="best-video-slots-for-2026">Video Slots</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">High RTP Slots</a>
+                                    <a href="#">Penny Slots</a>
+                                    <a href="#">Megaways System</a>
+                                    <a href="#">Fruit Machines</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="slot-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-video-slots-for-2026">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Video Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about-us" class="nav-item">About Us</a>
+                </nav>
+                <button class="search-toggle-btn" id="searchExpandBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+                <div class="search-overlay-bar" id="searchBarContainer">
+                    <div class="search-bar-inner">
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-field-icon"></i>
+                            <input type="text" id="searchInput" placeholder="Search your Adventure Game..."
+                                autocomplete="off">
+                        </div>
+                        <button class="search-cancel-btn" id="searchCancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-panel-view active" id="mobileMainPanel">
+            <div class="mobile-menu-header">
+                <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">
+                    <img src="./assets/images/close.png" alt="close_btn">
+                </button>
+                <div class="mobile-menu-logo">
+                    <img src="./assets/images/logo.png" alt="Adventure Gamers Logo">
+                </div>
+                <button class="search-toggle-btn" id="mobileSearchBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+            </div>
+
+            <nav class="mobile-nav-links">
+                <a href="./news" class="mobile-link">News</a>
+                <a href="./reviews" class="mobile-link">Reviews</a>
+                <a href="articles" class="mobile-link">Articles</a>
+                <a href="walkthroughs" class="mobile-link">Walkthroughs</a>
+
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileCasinoMenu">
+                    Casino Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileSlotsMenu">
+                    Slot Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <a href="about-us" class="mobile-link">About Us</a>
+            </nav>
+        </div>
+
+        <div class="mobile-panel-view" id="mobileCasinoMenu">
+            <div class="mobile-menu-header sub-panel-header">
+
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Casino Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="casino-games">Free Slots</a>
+                     <a href="best-casino-apps">Best Casino Apps</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">Aviator Casinos</a>
+                    <a href="#">Craps Casinos</a>
+                    <a href="#">Crash Casinos</a>
+                    <a href="#">Fish Game Casinos</a>
+                    <a href="#">Plinko Casinos</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="casino-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Play Free Slots with No Download Required 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-casino-apps">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Casino Apps</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-panel-view" id="mobileSlotsMenu">
+            <div class="mobile-menu-header sub-panel-header">
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Slot Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="slot-games">Classic Slots</a>
+                          <a href="best-video-slots-for-2026">Video Slots</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">High RTP Slots</a>
+                    <a href="#">Penny Slots</a>
+                    <a href="#">Megaways System</a>
+                    <a href="#">Fruit Machines</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="slot-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-video-slots-for-2026">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Video Slots for 2026</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+     <!-- Slot Page Intro Section Start -->
+    <section class="slot_intro_sec bg_dark py-7">
+        <div class="container">
+            <div class="slot_intro_container">
+                <h1 class="slot_intro_title">Best Casino Apps</h1>
+                <div class="slot_intro_author">
+                    <div class="slot_intro_avatar">JM</div>
+                    <div class="slot_intro_meta">
+                        <span class="slot_intro_name">Jovan Milenkovic</span>
+                        <span class="slot_intro_date">Updated: June 12, 2026</span>
+                    </div>
+                </div>
+                <div class="slot_intro_body">
+                    <p>The best casino apps deliver a seamless gaming experience directly to your smartphone or tablet, allowing you to enjoy your favorite casino games anytime and anywhere.</p>
+    
+                    <p><strong>Top-rated casino apps combine smooth performance, generous bonuses, secure banking, and extensive game libraries</strong>, making mobile gaming more convenient and rewarding than ever before.</p>
+    
+                    <p>We've reviewed the leading casino apps available today and selected the platforms that offer exceptional user experiences, fast payouts, and a wide variety of slots, table games, and live dealer options.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Slot Page Intro Section End -->
+    
+    
+    <!-- Slot TPs Start -->
+    <section class="slot_list_container">
+        <div class="container">
+    
+            <div class="slot_card">
+                <div class="card_rank">1</div>
+                <div class="card_content">
+                    <div class="brand_info">
+                        <img src="./assets/images/crown-coins-casino.png" alt="Casino App Logo" class="brand_logo_img">
+                    </div>
+                    <div class="offer_details">
+                        <h3 class="offer_title">1.5M Gold Coins + 75 SC</h3>
+                        <ul class="features_list">
+                            <li>✓ Dedicated Mobile Experience</li>
+                            <li>✓ Fast App Performance</li>
+                            <li>✓ Easy Account Management</li>
+                        </ul>
+                    </div>
+                    <div class="cta_area">
+                        <button class="btn_primary">PLAY NOW</button>
+                        <div class="rating_box"><span>5.0/5 ★★★★★</span></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="slot_card">
+                <div class="card_rank">2</div>
+                <div class="card_content">
+                    <div class="brand_info">
+                        <img src="./assets/images/muluck_logo.png" alt="Casino App Logo" class="brand_logo_img">
+                    </div>
+                    <div class="offer_details">
+                        <h3 class="offer_title">57,500 GC + 30 Free SC</h3>
+                        <ul class="features_list">
+                            <li>✓ Native iOS & Android Apps</li>
+                            <li>✓ Exclusive Mobile Promotions</li>
+                            <li>✓ Smooth User Interface</li>
+                        </ul>
+                    </div>
+                    <div class="cta_area">
+                        <button class="btn_primary">PLAY NOW</button>
+                        <div class="rating_box"><span>4.9/5 ★★★★★</span></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="slot_card">
+                <div class="card_rank">3</div>
+                <div class="card_content">
+                    <div class="brand_info">
+                        <img src="./assets/images/Stake-US-Casino-Review-TW-US.png" alt="Casino App Logo" class="brand_logo_img">
+                    </div>
+                    <div class="offer_details">
+                        <h3 class="offer_title">250k GC + 25 Stake Cash</h3>
+                        <ul class="features_list">
+                            <li>✓ Instant Mobile Access</li>
+                            <li>✓ Fast Withdrawals</li>
+                            <li>✓ Optimized for All Devices</li>
+                        </ul>
+                    </div>
+                    <div class="cta_area">
+                        <button class="btn_primary">PLAY NOW</button>
+                        <div class="rating_box"><span>4.9/5 ★★★★★</span></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="slot_card">
+                <div class="card_rank">4</div>
+                <div class="card_content">
+                    <div class="brand_info">
+                        <img src="./assets/images/realprize_logo.jpg" alt="Casino App Logo" class="brand_logo_img">
+                    </div>
+                    <div class="offer_details">
+                        <h3 class="offer_title">100k GC + 2 Free SC</h3>
+                        <ul class="features_list">
+                            <li>✓ Mobile Exclusive Bonuses</li>
+                            <li>✓ Fast Navigation</li>
+                            <li>✓ Secure Transactions</li>
+                        </ul>
+                    </div>
+                    <div class="cta_area">
+                        <button class="btn_primary">PLAY NOW</button>
+                        <div class="rating_box"><span>4.8/5 ★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="slot_card">
+                <div class="card_rank">5</div>
+                <div class="card_content">
+                    <div class="brand_info">
+                        <img src="./assets/images/lonstar_logo.png" alt="Casino App Logo" class="brand_logo_img">
+                    </div>
+                    <div class="offer_details">
+                        <h3 class="offer_title">500k GC + 105 Free SC</h3>
+                        <ul class="features_list">
+                            <li>✓ One-Tap Gameplay</li>
+                            <li>✓ Mobile Rewards Program</li>
+                            <li>✓ Daily App Bonuses</li>
+                        </ul>
+                    </div>
+                    <div class="cta_area">
+                        <button class="btn_primary">PLAY NOW</button>
+                        <div class="rating_box"><span>4.8/5 ★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="slot_card">
+                <div class="card_rank">6</div>
+                <div class="card_content">
+                    <div class="brand_info">
+                        <img src="./assets/images/mega_bonanza.png" alt="Casino App Logo" class="brand_logo_img">
+                    </div>
+                    <div class="offer_details">
+                        <h3 class="offer_title">7.5k GC + 2.5 Free SC</h3>
+                        <ul class="features_list">
+                            <li>✓ Lightweight Mobile App</li>
+                            <li>✓ Fast Loading Games</li>
+                            <li>✓ Reliable Customer Support</li>
+                        </ul>
+                    </div>
+                    <div class="cta_area">
+                        <button class="btn_primary">PLAY NOW</button>
+                        <div class="rating_box"><span>4.7/5 ★★★★☆</span></div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    <!-- Slot TPs End -->
+    
+    
+    <!-- Slots Ranking Section Start -->
+    <section class="slot_table_sec bg_dark py-7">
+        <div class="slot_table_container">
+            <h2 class="section_heading mb-5">Top Casino Apps Features Comparison</h2>
+    
+            <div class="slot_table_wrapper">
+                <table class="slot_data_table">
+                    <thead>
+                        <tr>
+                            <th>Casino App</th>
+                            <th>Platform</th>
+                            <th>Mobile Bonus</th>
+                            <th>Live Casino</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Crown Coins</strong></td><td>iOS & Android</td><td>75 SC</td><td>Yes</td><td>5.0/5</td></tr>
+                        <tr><td><strong>McLuck</strong></td><td>iOS & Android</td><td>30 SC</td><td>Yes</td><td>4.9/5</td></tr>
+                        <tr><td><strong>Stake.us</strong></td><td>iOS & Android</td><td>25 Stake Cash</td><td>Yes</td><td>4.9/5</td></tr>
+                        <tr><td><strong>RealPrize</strong></td><td>iOS & Android</td><td>2 SC</td><td>Yes</td><td>4.8/5</td></tr>
+                        <tr><td><strong>Lonestar Casino</strong></td><td>iOS & Android</td><td>105 SC</td><td>Yes</td><td>4.8/5</td></tr>
+                        <tr><td><strong>Mega Bonanza</strong></td><td>iOS & Android</td><td>2.5 SC</td><td>Yes</td><td>4.7/5</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- Slots Ranking Section End -->
+    
+    
+    <!-- Slots Strategy Section Start -->
+    <section class="slot_strategy_sec">
+        <div class="container">
+            <h2 class="slot_strategy_title">Why Choose Casino Apps?</h2>
+    
+            <p class="slot_strategy_intro">
+                Modern casino apps provide a premium gaming experience with convenient access to slots, table games, live dealers, promotions, and secure banking options directly from your mobile device.
+            </p>
+    
+            <div class="strategy_grid">
+    
+                <div class="strategy_card">
+                    <div class="strategy_icon">01</div>
+                    <h3>Play Anywhere</h3>
+                    <p>Enjoy your favorite casino games anytime and anywhere using a smartphone or tablet.</p>
+                </div>
+    
+                <div class="strategy_card">
+                    <div class="strategy_icon">02</div>
+                    <h3>Exclusive Mobile Bonuses</h3>
+                    <p>Many casino apps reward players with app-only promotions, free spins, and welcome offers.</p>
+                </div>
+    
+                <div class="strategy_card">
+                    <div class="strategy_icon">03</div>
+                    <h3>Fast & Secure Banking</h3>
+                    <p>Deposit and withdraw funds quickly using trusted payment methods optimized for mobile users.</p>
+                </div>
+    
+                <div class="strategy_card">
+                    <div class="strategy_icon">04</div>
+                    <h3>Optimized Performance</h3>
+                    <p>Casino apps are designed for smooth gameplay, fast loading times, and intuitive navigation.</p>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <!-- Slots Strategy Section End -->
+    <!-- Footer Start -->
+    <footer class="site-footer pt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href="./" class="bg_center_contain"></a>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li><a href="./news">News</a></li>
+                            <li><a href="./reviews">Reviews</a></li>
+                            <li><a href="articles">Articles</a></li>
+                            <li><a href="./walkthroughs">Walkthroughs</a></li>
+                            <li><a href="./about-us">About US</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Customer Support
+                        </h3>
+                        <ul>
+                            <li><a href="./casino-games">Casino Games</a></li>
+                            <li><a href="./slot-games">Slot Games</a></li>
+                            <li><a href="./terms-conditions">Terms & Conditions </a></li>
+                            <li><a href="./privacy-policy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>
+                            Get in Touch
+                        </h3>
+                        <p class="mb-3">
+                            Have questions about our products? We’re here to help.
+                        </p>
+                        <p class="text_theme mb-2">
+                            Phone
+                        </p>
+                        <p class="mb-3 text_white">
+                            <a href="tel:+17788970544">+1 778-897-0544</a>
+                        </p>
+                        <p class="text_theme mb-2">
+                            Address
+                        </p>
+                        <p class="text_white">
+                            <a href="https://maps.app.goo.gl/bbmBLiC5b71tKLVC6">225 W 8th Ave, Suite 300
+                                Vancouver, BC V5Y 1N3
+                                Canada</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Copyright © 2026 <a class="text_theme" href="./"> studioz-game.com </a> All Rights Reserved.</p>
+                    <div class="ssl_logo">
+                        <div class="ssl_logo_inner bg-contain" style="background-image: url(assets/images/ssl.png);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <button id="topBtn" class="show">
+        ↑
+    </button>
+
+
+    <script src="./assets/js/jquery.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const searchInput = document.getElementById('casinoSearchInput');
+            const cards = document.querySelectorAll('.casino_games_card');
+
+            searchInput.addEventListener('input', function () {
+
+                const query = this.value.toLowerCase().trim();
+
+                cards.forEach(card => {
+
+                    const name = card.dataset.name.toLowerCase();
+
+                    if (name.includes(query)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/filters-data.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/render.js"></script>
+    <script src="./assets/js/filters.js"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>

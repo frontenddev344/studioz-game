@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Articles</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-container">
+                <button class="menu-toggle" id="menuOpenBtn" aria-label="Open Menu">
+                    <img src="./assets/images/menu.png" alt="menu_btn">
+                </button>
+                <nav class="desktop-nav nav-left">
+                    <a href="./news" class="nav-item">News</a>
+                    <a href="./reviews" class="nav-item">Reviews</a>
+                    <a href="./articles" class="nav-item">Articles</a>
+                    <a href="./walkthroughs" class="nav-item active">Walkthroughs</a>
+                </nav>
+                <div class="brand-logo">
+                    <a href="./">
+                        <img src="./assets/images/logo.png" alt=" Logo">
+                    </a>
+                </div>
+                <nav class="desktop-nav nav-right">
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Casino Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="casino-games">Free Slots</a>
+                                        <a href="best-casino-apps">Best Casino Apps</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">Aviator Casinos</a>
+                                    <a href="#">Craps Casinos</a>
+                                    <a href="#">Crash Casinos</a>
+                                    <a href="#">Fish Game Casinos</a>
+                                    <a href="#">Plinko Casinos</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="casino-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Play Free Slots with No Download Required 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-casino-apps">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Casino Apps</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Slot Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="slot-games">Classic Slots</a>
+                                          <a href="best-video-slots-for-2026">Video Slots</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">High RTP Slots</a>
+                                    <a href="#">Penny Slots</a>
+                                    <a href="#">Megaways System</a>
+                                    <a href="#">Fruit Machines</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="slot-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-video-slots-for-2026">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Video Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about-us" class="nav-item">About Us</a>
+                </nav>
+                <button class="search-toggle-btn" id="searchExpandBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+                <div class="search-overlay-bar" id="searchBarContainer">
+                    <div class="search-bar-inner">
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-field-icon"></i>
+                            <input type="text" id="searchInput" placeholder="Search your Adventure Game..."
+                                autocomplete="off">
+                        </div>
+                        <button class="search-cancel-btn" id="searchCancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-panel-view active" id="mobileMainPanel">
+            <div class="mobile-menu-header">
+                <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">
+                    <img src="./assets/images/close.png" alt="close_btn">
+                </button>
+                <div class="mobile-menu-logo">
+                    <img src="./assets/images/logo.png" alt="Adventure Gamers Logo">
+                </div>
+                <button class="search-toggle-btn" id="mobileSearchBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+            </div>
+
+            <nav class="mobile-nav-links">
+                <a href="./news" class="mobile-link">News</a>
+                <a href="./reviews" class="mobile-link">Reviews</a>
+                <a href="articles" class="mobile-link">Articles</a>
+                <a href="walkthroughs" class="mobile-link active">Walkthroughs</a>
+
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileCasinoMenu">
+                    Casino Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileSlotsMenu">
+                    Slot Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <a href="about-us" class="mobile-link">About Us</a>
+            </nav>
+        </div>
+
+        <div class="mobile-panel-view" id="mobileCasinoMenu">
+            <div class="mobile-menu-header sub-panel-header">
+
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Casino Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="casino-games">Free Slots</a>
+                     <a href="best-casino-apps">Best Casino Apps</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">Aviator Casinos</a>
+                    <a href="#">Craps Casinos</a>
+                    <a href="#">Crash Casinos</a>
+                    <a href="#">Fish Game Casinos</a>
+                    <a href="#">Plinko Casinos</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="casino-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Play Free Slots with No Download Required 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-casino-apps">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Casino Apps</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-panel-view" id="mobileSlotsMenu">
+            <div class="mobile-menu-header sub-panel-header">
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Slot Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="slot-games">Classic Slots</a>
+                          <a href="best-video-slots-for-2026">Video Slots</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">High RTP Slots</a>
+                    <a href="#">Penny Slots</a>
+                    <a href="#">Megaways System</a>
+                    <a href="#">Fruit Machines</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="slot-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-video-slots-for-2026">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Video Slots for 2026</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    <!-- Banner Start -->
+    <section class="hero-banner-section">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-map-card" style="background-image: url(./assets/images/walkthrough_banner.png);">
+                    <div class="notch-svg-wrapper top-right-step">
+                        <svg width="140" height="60" viewBox="0 0 107 45" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0H107V45C107 43.1 107.52 33.34 90.5 33.72H35C25.49 33.72 17.75 26.4 17.51 17.29L17.5 16.42C17.26 7.31 9.52 0 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="notch-svg-wrapper bottom-left-step">
+                        <svg width="140" height="60" viewBox="0 0 107 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0V46H107C97.35 46 89.6 38.52 89.36 29.21L89.35 28.32C89.11 19.01 81.37 11.53 71.85 11.53H16.37C-0.65 11.92 0 1.94 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="hero-card-content">
+                        <h1 class="hero-title">Adventure Game Walkthrough Hub </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+    <!-- Walkthrough Content Start -->
+    <main class="walkthrough_hub_container py-5 bg_dark">
+        <div class="container">
+            <div class="walkthrough_box">
+                <div class="walkthrough_intro">
+                    <p class="mb-4">
+                        Love adventure games but sometimes get stuck on a challenging puzzle or aren't sure where to go
+                        next? You've come to the right place. Our collection of detailed walkthroughs provides clear,
+                        step-by-step guidance to help you progress through a wide variety of adventure games.
+                    </p>
+                    <p class="mb-3">
+                        Whether you're exploring timeless classics or tackling the latest releases, our guides are
+                        designed
+                        to help you overcome obstacles, solve tricky puzzles, uncover hidden secrets, and complete your
+                        gaming journey with confidence.
+                    </p>
+                </div>
+
+                <input type="text" id="walkthroughSearch" class="walkthrough_search"
+                    placeholder="Search for a game title...">
+
+                <section class="walkthrough_sections_wrap">
+                    <section id="09" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">0-9</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="./5-days-a-stranger">5 Days a Stranger</a></li>
+                            <li class="walkthrough_cards"><a href="./6-daya-a-sacrifice">6 Days a Sacrifice</a></li>
+                            <li class="walkthrough_cards"><a href="./7-days-a-skeptic">7 Days a Skeptic</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="A" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">A</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/agatha-christie">Agatha Christie - Hercule Poirot:
+                                    The
+                                    First
+                                    Cases</a></li>
+                            <li class="walkthrough_cards"><a href="/almost-my-floor">Almost my Floor</a></li>
+                            <li class="walkthrough_cards"><a href="/amnesia-bunker">Amnesia: The Bunker walkthrough</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="B" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">B</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/bttf-1">Back to the Future: The Game - Episode I:
+                                    It's
+                                    About
+                                    Time</a></li>
+                            <li class="walkthrough_cards"><a href="/bttf-2">Back to the Future: The Game - Episode II:
+                                    Get
+                                    Tannen!</a></li>
+                            <li class="walkthrough_cards"><a href="/bttf-3">Back to the Future: The Game - Episode III:
+                                    Citizen
+                                    Brown</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="C" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">C</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/catyph">Catyph: The Kunci Experiment</a></li>
+                            <li class="walkthrough_cards"><a href="/challenge-tentacle">Challenge of the Tentacle</a>
+                            </li>
+                            <li class="walkthrough_cards"><a href="/star-trek-ch7">Chapter 7 of Star Trek: 25th
+                                    Anniversary
+                                    Enhanced</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="D" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">D</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/day-tentacle">Day of the Tentacle</a></li>
+                            <li class="walkthrough_cards"><a href="/delores">DELORES: A Thimbleweed Park Mini
+                                    Adventure</a>
+                            </li>
+                            <li class="walkthrough_cards"><a href="/detective-di">Detective Di: The Silk Rose
+                                    Murders</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="E" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">E</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/ecoquest-2">EcoQuest 2: Lost Secret of the
+                                    Rainforest</a>
+                            </li>
+                            <li class="walkthrough_cards"><a href="/ecoquest-1">EcoQuest: The Search for Cetus</a></li>
+                            <li class="walkthrough_cards"><a href="/escape-monkey">Escape from Monkey Island</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="F" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">F</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/firmament">Firmament</a></li>
+                            <li class="walkthrough_cards"><a href="/flight-amazon">Flight of the Amazon Queen</a></li>
+                            <li class="walkthrough_cards"><a href="/frankenstein">Frankenstein: Through the Eyes of the
+                                    Monster</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="G" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">G</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/gk3">Gabriel Knight 3: Blood of the Sacred, Blood of
+                                    the
+                                    Damned</a></li>
+                            <li class="walkthrough_cards"><a href="/gk1">Gabriel Knight: Sins of the Fathers</a></li>
+                            <li class="walkthrough_cards"><a href="/galador">Galador: The Prince And The Coward</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="H" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">H</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/hamlet">Hamlet</a></li>
+                            <li class="walkthrough_cards"><a href="/heart-china">Heart of China</a></li>
+                            <li class="walkthrough_cards"><a href="/hook">Hook</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="I" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">I</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/igor">Igor: Objective Uikokahonia</a></li>
+                            <li class="walkthrough_cards"><a href="/indy-fate">Indiana Jones and the Fate of
+                                    Atlantis</a>
+                            </li>
+                            <li class="walkthrough_cards"><a href="/indy-last">Indiana Jones and the Last Crusade</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="J" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">J</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/bond-stealth">James Bond: The Stealth Affair</a>
+                            </li>
+                            <li class="walkthrough_cards"><a href="/john-ray">John Ray’s Space Adventure</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="K" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">K</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/kapia">KAPIA</a></li>
+                            <li class="walkthrough_cards"><a href="/kathy-rain">Kathy Rain: A Detective is Born</a></li>
+                            <li class="walkthrough_cards"><a href="/kings-quest-8">King's Quest 8: Mask of Eternity</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="L" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">L</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/lamplight">Lamplight City</a></li>
+                            <li class="walkthrough_cards"><a href="/last-stop">Last Stop Achievement Guide</a></li>
+                            <li class="walkthrough_cards"><a href="/kyrandia">Legend Of Kyrandia Book 1</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="M" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">M</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/maniac-mansion">Maniac Mansion</a></li>
+                            <li class="walkthrough_cards"><a href="/metal-dead">Metal Dead</a></li>
+                            <li class="walkthrough_cards"><a href="/mewgenics">Mewgenics starter guide</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="N" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">N</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/nd-venice">Nancy Drew 18: The Phantom of Venice</a>
+                            </li>
+                            <li class="walkthrough_cards"><a href="/nd-blackmoor">Nancy Drew: Curse of Blackmoor
+                                    Manor</a>
+                            </li>
+                            <li class="walkthrough_cards"><a href="/nd-design">Nancy Drew: Danger by design</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="O" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">O</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/light-darkness">Of Light and Darkness: The
+                                    Prophecy</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="P" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">P</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/peppers">Pepper's Adventures in Time</a></li>
+                            <li class="walkthrough_cards"><a href="/police-2">Police Quest 2: The Vengeance</a></li>
+                            <li class="walkthrough_cards"><a href="/police-3">Police Quest 3: The Kindred</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="Q" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">Q</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/quarantine">Quarantine Zone: The Last Check</a></li>
+                            <li class="walkthrough_cards"><a href="/qfg5-fighter">Quest For Glory 5: Dragon Fire
+                                    (Fighter)</a>
+                            </li>
+                            <li class="walkthrough_cards"><a href="/qfg5-magic">Quest For Glory 5: Dragon Fire (Magic
+                                    user)</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="R" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">R</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/reality">Reality Incognita</a></li>
+                            <li class="walkthrough_cards"><a href="/reanimal">Reanimal Walkthrough</a></li>
+                            <li class="walkthrough_cards"><a href="/recursive">Recursive Ruin (Hints)</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="S" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">S</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/sally-5">Sally Face Episode Five</a></li>
+                            <li class="walkthrough_cards"><a href="/sally-4-1">Sally Face Episode Four - Part 1</a></li>
+                            <li class="walkthrough_cards"><a href="/sally-4-2">Sally Face Episode Four - Part 2</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="T" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">T</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/teen-agent">Teen Agent</a></li>
+                            <li class="walkthrough_cards"><a href="/terminator">Terminator 2D: NO FATE</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="U" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">U</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/ulysses">Ulysses and the Golden Fleece</a></li>
+                            <li class="walkthrough_cards"><a href="/unforeseen">Unforeseen Incidents</a></li>
+                            <li class="walkthrough_cards"><a href="/uninvited">Uninvited</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="V" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">V</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/venator">Venator</a></li>
+                            <li class="walkthrough_cards"><a href="/virtuaverse">VirtuaVerse</a></li>
+                            <li class="walkthrough_cards"><a href="/voodoo">Voodoo Detective</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="W" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">W</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/ticks">What Makes You Tick?</a></li>
+                            <li class="walkthrough_cards"><a href="/wizard-princess">Wizard and the Princess</a></li>
+                            <li class="walkthrough_cards"><a href="/woodruff">Woodruff and the Schnibble of Azimuth</a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="Y" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">Y</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/yet-another">Yet Another Hero Story</a></li>
+                        </ul>
+                    </section>
+
+                    <section id="Z" class="walkthrough_sections">
+                        <h2 class="walkthrough_section_title">Z</h2>
+                        <ul class="walkthrough_list">
+                            <li class="walkthrough_cards"><a href="/zak-1">Zak McKracken and the Alien Mindbenders</a>
+                            </li>
+                            <li class="walkthrough_cards"><a href="/zak-2">Zak McKracken: Between Time And Space</a>
+                            </li>
+                            <li class="walkthrough_cards"><a href="/zork-1">Zork I: The Great Underground Empire</a>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Walkthrough Content End -->
+
+     <!-- Footer Start -->
+    <footer class="site-footer pt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href="./" class="bg_center_contain"></a>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li><a href="./news">News</a></li>
+                            <li><a href="./reviews">Reviews</a></li>
+                            <li><a href="articles">Articles</a></li>
+                            <li><a href="./walkthroughs">Walkthroughs</a></li>
+                            <li><a href="./about-us">About US</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Customer Support
+                        </h3>
+                        <ul>
+                            <li><a href="./casino-games">Casino Games</a></li>
+                            <li><a href="./slot-games">Slot Games</a></li>                         
+                            <li><a href="./terms-conditions">Terms & Conditions </a></li>
+                            <li><a href="./privacy-policy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                      <div class="footer-contact">
+                        <h3>
+                            Get in Touch
+                        </h3>
+                        <p class="mb-3">
+                            Have questions about our products? We’re here to help.
+                        </p>                       
+                        <p class="text_theme mb-2">
+                            Phone
+                        </p>
+                        <p class="mb-3 text_white">
+                            <a href="tel:+17788970544">+1 778-897-0544</a>
+                        </p>
+                        <p class="text_theme mb-2">
+                            Address
+                        </p>
+                        <p class="text_white">
+                            <a href="https://maps.app.goo.gl/bbmBLiC5b71tKLVC6">225 W 8th Ave, Suite 300
+                                Vancouver, BC V5Y 1N3
+                                Canada</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+               <p>Copyright © 2026 <a class="text_theme" href="./"> studioz-game.com </a> All Rights Reserved.</p>
+                    <div class="ssl_logo">
+                        <div class="ssl_logo_inner bg-contain" style="background-image: url(assets/images/ssl.png);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+
+
+    <button id="topBtn" class="show">
+        ↑
+    </button>
+
+    <script src="./assets/js/jquery.js"></script>
+    <script>
+        document.getElementById('walkthroughSearch').addEventListener('keyup', function () {
+            let filter = this.value.toLowerCase();
+            let sections = document.querySelectorAll('.walkthrough_sections');
+
+            sections.forEach(section => {
+                let cards = section.querySelectorAll('.walkthrough_cards');
+                let hasVisibleCards = false;
+
+                cards.forEach(card => {
+                    let text = card.textContent.toLowerCase();
+                    if (text.includes(filter)) {
+                        card.style.display = "";
+                        hasVisibleCards = true;
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+                section.style.display = hasVisibleCards ? "" : "none";
+            });
+        });
+    </script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/filters-data.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/render.js"></script>
+    <script src="./assets/js/filters.js"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>

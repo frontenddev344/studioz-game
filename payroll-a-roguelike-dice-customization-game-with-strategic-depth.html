@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Payroll: A Roguelike Dice Customization Game with Strategic Depth</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-container">
+                <button class="menu-toggle" id="menuOpenBtn" aria-label="Open Menu">
+                    <img src="./assets/images/menu.png" alt="menu_btn">
+                </button>
+                <nav class="desktop-nav nav-left">
+                    <a href="./news" class="nav-item">News</a>
+                    <a href="./reviews" class="nav-item">Reviews</a>
+                    <a href="./articles" class="nav-item">Articles</a>
+                    <a href="./walkthroughs" class="nav-item">Walkthroughs</a>
+                </nav>
+                <div class="brand-logo">
+                    <a href="./">
+                        <img src="./assets/images/logo.png" alt=" Logo">
+                    </a>
+                </div>
+                <nav class="desktop-nav nav-right">
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Casino Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="casino-games">Free Slots</a>
+                                        <a href="best-casino-apps">Best Casino Apps</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">Aviator Casinos</a>
+                                    <a href="#">Craps Casinos</a>
+                                    <a href="#">Crash Casinos</a>
+                                    <a href="#">Fish Game Casinos</a>
+                                    <a href="#">Plinko Casinos</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="casino-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Play Free Slots with No Download Required 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-casino-apps">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Casino Apps</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="nav-item-wrapper">
+                        <a href="#" class="nav-item">Slot Games</a>
+                        <div class="mega-menu-dropdown">
+                            <div class="mega-menu-inner">
+                                <div class="mega-column">
+                                    <h3>Guides</h3>
+                                    <a href="slot-games">Classic Slots</a>
+                                          <a href="best-video-slots-for-2026">Video Slots</a>
+                                </div>
+                                <!-- <div class="mega-column">
+                                    <h3>Types</h3>
+                                    <a href="#">High RTP Slots</a>
+                                    <a href="#">Penny Slots</a>
+                                    <a href="#">Megaways System</a>
+                                    <a href="#">Fruit Machines</a>
+                                </div> -->
+                                <div class="mega-column mega-popular">
+                                    <h3>Popular</h3>
+                                    <a class="popular-card" href="slot-games">
+                                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                    <a class="popular-card" href="best-video-slots-for-2026">
+                                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                                        <div class="card-details">
+                                            <h4>Best Video Slots for 2026</h4>
+                                            <span>Jovan Mile... / 22/04/2026</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about-us" class="nav-item">About Us</a>
+                </nav>
+                <button class="search-toggle-btn" id="searchExpandBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+                <div class="search-overlay-bar" id="searchBarContainer">
+                    <div class="search-bar-inner">
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-field-icon"></i>
+                            <input type="text" id="searchInput" placeholder="Search your Adventure Game..."
+                                autocomplete="off">
+                        </div>
+                        <button class="search-cancel-btn" id="searchCancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-panel-view active" id="mobileMainPanel">
+            <div class="mobile-menu-header">
+                <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">
+                    <img src="./assets/images/close.png" alt="close_btn">
+                </button>
+                <div class="mobile-menu-logo">
+                    <img src="./assets/images/logo.png" alt="Adventure Gamers Logo">
+                </div>
+                <button class="search-toggle-btn" id="mobileSearchBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+            </div>
+
+            <nav class="mobile-nav-links">
+                <a href="./news" class="mobile-link">News</a>
+                <a href="./reviews" class="mobile-link">Reviews</a>
+                <a href="articles" class="mobile-link">Articles</a>
+                <a href="walkthroughs" class="mobile-link">Walkthroughs</a>
+
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileCasinoMenu">
+                    Casino Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <button type="button" class="mobile-link dynamic-trigger" data-target="mobileSlotsMenu">
+                    Slot Games
+                    <span class="mobile-arrow-wrapper">
+                        <img src="./assets/images/dropdown.png" class="mobile-nav-arrow" alt="arrow_right">
+                    </span>
+                </button>
+                <a href="about-us" class="mobile-link">About Us</a>
+            </nav>
+        </div>
+
+        <div class="mobile-panel-view" id="mobileCasinoMenu">
+            <div class="mobile-menu-header sub-panel-header">
+
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Casino Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="casino-games">Free Slots</a>
+                     <a href="best-casino-apps">Best Casino Apps</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">Aviator Casinos</a>
+                    <a href="#">Craps Casinos</a>
+                    <a href="#">Crash Casinos</a>
+                    <a href="#">Fish Game Casinos</a>
+                    <a href="#">Plinko Casinos</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="casino-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Play Free Slots with No Download Required 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-casino-apps">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Casino Apps</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-panel-view" id="mobileSlotsMenu">
+            <div class="mobile-menu-header sub-panel-header">
+                <button type="button" class="panel-back-btn">
+                    <img src="./assets/images/back_arrow.png" class="mobile-back-arrow" alt="arrow_left"> Slot Games
+                </button>
+            </div>
+            <div class="mobile-panel-scroll-content">
+                <div class="mobile-sub-section">
+                    <h3>Guides</h3>
+                    <a href="slot-games">Classic Slots</a>
+                          <a href="best-video-slots-for-2026">Video Slots</a>
+                </div>
+                <!-- <div class="mobile-sub-section">
+                    <h3>Types</h3>
+                    <a href="#">High RTP Slots</a>
+                    <a href="#">Penny Slots</a>
+                    <a href="#">Megaways System</a>
+                    <a href="#">Fruit Machines</a>
+                </div> -->
+                <div class="mobile-sub-section">
+                    <h3>Popular</h3>
+                    <a class="popular-card" href="slot-games">
+                        <img src="./assets/images/slot-1.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Top-Rated High RTP Slots for 2026</h4>
+                            <span>Jovan Mile... / 15/06/2025</span>
+                        </div>
+                    </a>
+                    <a class="popular-card" href="best-video-slots-for-2026">
+                        <img src="./assets/images/slot-2.jpg" alt="Popular Post Thumbnail">
+                        <div class="card-details">
+                            <h4>Best Video Slots for 2026</h4>
+                            <span>Jovan Mile... / 09/10/2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Banner Start -->
+    <section class="hero-banner-section sub_banner">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-map-card" style="background-image: url(./assets/images/Payroll.jpg);">
+                    <div class="notch-svg-wrapper top-right-step">
+                        <svg width="140" height="60" viewBox="0 0 107 45" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0H107V45C107 43.1 107.52 33.34 90.5 33.72H35C25.49 33.72 17.75 26.4 17.51 17.29L17.5 16.42C17.26 7.31 9.52 0 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="notch-svg-wrapper bottom-left-step">
+                        <svg width="140" height="60" viewBox="0 0 107 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0V46H107C97.35 46 89.6 38.52 89.36 29.21L89.35 28.32C89.11 19.01 81.37 11.53 71.85 11.53H16.37C-0.65 11.92 0 1.94 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="hero-card-content">
+                        <h1 class="hero-title">Payroll: A Roguelike Dice Customization Game with Strategic Depth</h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+
+    <!-- Articles Details Content Start -->
+    <section class="article-detail-page py-7">
+        <div class="container">
+            <div class="article-detail-page__container">
+
+                <div class="article-detail-page__intro">
+
+                    <p>
+                        Payroll: A Roguelike Dice Customization Game with Strategic Depth
+                    </p>
+
+                    <p>
+                        An Overview of Payroll's Unique Mechanics
+                        Payroll introduces an intriguing blend of chance and strategy through dice manipulation. Unlike
+                        traditional dice games where randomness determines outcomes, Payroll empowers players to
+                        customize their dice faces with symbols that interact in complex ways. The result is a roguelike
+                        experience where preparation and tactical decision-making compete with luck for control over
+                        your success.
+                    </p>
+
+                    <p>
+                        Understanding Payroll's Core Gameplay
+                        The Basic Structure
+                        Each gaming session centers on a simple premise: accumulate currency to satisfy escalating
+                        financial obligations. The loan shark—your antagonistic character—sets the monetary target you
+                        must reach within a limited number of turns. Three dice form your primary tool, and their faces
+                        become your canvas for strategic customization.
+                    </p>
+
+                </div>
+
+                <div class="article-detail-page__highlight">
+
+                    <p>
+                        Dice Manipulation Mechanics
+                        The dice system operates on an interesting constraint: you can only flip visible faces upward.
+                        This creates tension between your desired dice configuration and what's physically accessible.
+                        You cannot simply rotate a die to show the face you want—you must work with what presents
+                        itself.
+                        Once faces land on top, the symbols etched onto them generate currency based on their programmed
+                        effects. Some symbols operate independently, while others create powerful synergies when
+                        combined.
+                    </p>
+
+                </div>
+
+                <div class="article-detail-page__section">
+
+                    <h2 class="article-detail-page__heading">
+                        Symbol Customization and Strategy
+                    </h2>
+
+                    <p>
+                        After completing each round, you earn an opportunity to select new symbols for your dice. With
+                        over 100 possible symbol combinations, the customization depth becomes staggering. Certain
+                        symbols provide straightforward cash generation, while others multiply their value based on
+                        specific conditions.
+                    </p>
+
+                    <h3 class="article-detail-page__subheading">
+                        Examples of strategic considerations:
+                    </h3>
+
+                    <ul class="article-detail-page__list">
+
+                        <li>Solo symbols generate fixed amounts with no prerequisites</li>
+
+                        <li>Conditional symbols multiply their value when other specific symbols appear</li>
+
+                        <li>Multiplier symbols expand the earning potential of adjacent symbols</li>
+
+                        <li>Chaining symbols create cascading effects when appearing together</li>
+
+                    </ul>
+
+                    <p>
+                        The symbol placement becomes critical. You physically select which die face receives your chosen
+                        symbol, giving you control over future rotations and combinations.
+                    </p>
+
+                </div>
+
+                <div class="article-detail-page__section">
+
+                    <h2 class="article-detail-page__heading">
+                        Escalating Difficulty
+                    </h2>
+
+                    <p>
+                        The loan shark actively works against you. As rounds progress, the target debt increases.
+                        Additionally, modifiers introduce unexpected obstacles: dice faces might become locked, previous
+                        configurations might become unavailable, or new constraints reshape your strategy entirely.
+                    </p>
+
+                    <p>
+                        The mounting financial demands force tactical adaptation. You must balance long-term symbol
+                        building with immediate cash generation needs.
+                    </p>
+
+                </div>
+
+                <div class="article-detail-page__section">
+
+                    <h2 class="article-detail-page__heading">
+                        Developer Background and Project History
+                    </h2>
+
+                    <div class="article-detail-page__games">
+
+                        <div class="article-detail-page__game">
+                            <h4>Creator Spotlight: Thyme</h4>
+                            <p>Thyme, an independent developer, created Payroll as their debut game. The project
+                                required two years of development, demonstrating significant investment in creating a
+                                polished experience. Throughout development, Thyme remained engaged with the community,
+                                continuously refining the game through regular updates.</p>
+                        </div>
+
+                        <div class="article-detail-page__game">
+                            <h4>Development Support and Evolution</h4>
+                            <p>The development journey shows commitment to improving the player experience. Thyme has:
+                                Redesigned the visual presentation of all symbols for clarity and aesthetics; Introduced
+                                mythic-tier rarities like Boltimus the Worldshaper, expanding strategic options;
+                                Implemented controller compatibility, broadening accessibility; Balanced gameplay
+                                mechanics based on community feedback.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="article-detail-page__section">
+                    <h2 class="article-detail-page__heading">
+                        Release Information and Availability
+                    </h2>
+                    <p>
+                        Launch Timeline
+                        Payroll is scheduled to release in March 2026. While the exact date remains unconfirmed,
+                        announcements regarding the specific launch window are anticipated in the near future.
+                    </p>
+                    <p>
+                        Platform Details
+                        Upon full release, the game will be available on PC through two distribution channels: Steam -
+                        The mainstream digital storefront; Itch.io - An independent-focused platform popular with
+                        smaller developers. This dual-platform strategy ensures accessibility for players with different
+                        platform preferences.
+                    </p>
+                </div>
+
+                <div class="article-detail-page__info-card">
+                    <h3>Session Duration and Time Investment</h3>
+                    <p>
+                        Run Length Expectations
+                        Typical Payroll sessions span 15-30 minutes depending on player skill and decision quality. The
+                        roguelike structure necessitates quick, decisive gameplay without lengthy cutscenes or
+                        exposition.
+                    </p>
+                </div>
+
+                <div class="article-detail-page__info-card">
+                    <h3>Replayability Without Progression Systems</h3>
+                    <p>
+                        As a true roguelike, Payroll features no meta-progression system. Failed runs offer no permanent
+                        unlocks or progression. Each attempt begins identically—with blank dice waiting for symbol
+                        customization. This design choice maintains challenge consistency while emphasizing skill
+                        development over persistent advancement.
+                        Success requires mastering the fundamental mechanics across repeated attempts.
+                    </p>
+                </div>
+
+                <div class="article-detail-page__info-card">
+                    <h3>Additional Game Modes and Challenges</h3>
+                    <p>
+                        Unlockable Variants
+                        Completing specific objectives unlocks alternative gameplay modes, creating new strategic
+                        layers:
+                        Green Die Mode - Unlocked by completing the fifth debt in standard play. This mode provides one
+                        free reroll per debt, slightly reducing randomness and allowing strategic repositioning.
+                        Blue Die Mode - Accessible after clearing 100 total debts across multiple runs. This mode adds
+                        an extra item to the first shop encounter, expanding customization options early in your run.
+                    </p>
+                </div>
+
+                <div class="article-detail-page__info-card">
+                    <h3>Why Payroll Stands Out</h3>
+                    <p>
+                        Unique Mechanic: The dice customization system differs from typical roguelikes. Rather than
+                        collecting weapons or items, you build the tool itself.
+                        Strategic Depth: Simple mechanics create complex decision trees. Understanding symbol
+                        interactions determines success more than luck.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Articles Details Content End -->
+
+    <!-- FAQ Section Start -->
+    <section class="faq-section bg_dark py-7">
+        <div class="container">
+
+            <div class="w-lg-50 mx-auto">
+                <h2 class="section_heading mb-5">Frequently Asked Questions</h2>
+
+                <div class="accordion accordion-flush" id="accordionExample">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                <h3>
+                                    What is the core premise of Payroll?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Payroll places you in a financial obligation scenario where you must generate currency
+                                through dice rolling and symbol customization to satisfy debt demands. The loan shark
+                                antagonist sets increasingly difficult targets, creating escalating challenges
+                                throughout your run.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                <h3>
+                                    How do symbols work in the game?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Symbols are special identifiers that you place on dice faces. Each symbol produces a
+                                specific effect—some generate flat currency amounts, while others multiply based on
+                                certain conditions or interact with other symbols. You customize your dice by selecting
+                                which symbol occupies which face after each round.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                <h3>
+                                    Can I control what symbols appear when rolling dice?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Partially. You cannot guarantee specific symbols will land on top, but you can flip
+                                visible dice faces to access the configuration you prefer. However, flipping is limited
+                                to currently visible faces, constraining your options. This creates interesting tension
+                                between desired and actual outcomes.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                <h3>
+                                    What makes Payroll different from other roguelikes?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Most roguelikes focus on character progression or item collection. Payroll emphasizes
+                                building the tool itself—your customized dice—through symbol selection and strategic
+                                placement. The mechanic creates unique decision-making that differs from typical
+                                item-based games.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                <h3>
+                                    Is Payroll purely luck-based or skill-based?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Payroll balances both elements. Dice rolls introduce randomness, but symbol customization, placement strategy, and debt management decisions heavily favor skilled players. Over multiple runs, strategic players consistently outperform those relying on luck.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                <h3>
+                                    How difficult is Payroll?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Payroll is intentionally challenging. The loan shark introduces escalating obstacles, and the financial targets require careful resource management. However, difficulty varies by playstyle—conservative players might clear debts consistently, while aggressive strategies risk failure. Accessibility options like Green Die and Blue Die modes reduce difficulty for different skill levels.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                                <h3>
+                                    Do completed runs offer permanent rewards or progression?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                No. Payroll maintains a pure roguelike structure without meta-progression. Completing runs unlocks alternative modes but provides no permanent character or deck advancement. Each new run starts identically, requiring fresh symbol customization.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                                <h3>
+                                    What happens if I fail a debt obligation?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Failing a debt ends your current run. You return to the beginning and must start a new attempt from the first debt. There are no checkpoints or save systems—roguelike design emphasizes managing risk across entire runs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                                <h3>
+                                    Can I skip difficult debts?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Yes, you can decline difficult debt obligations. However, skipping carries consequences—the amount owed increases due to penalties and fees. This creates meaningful decisions about acceptable losses and challenging targets.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
+                                <h3>
+                                    What is the significance of the loan shark character?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                The loan shark serves as both antagonist and source of difficulty escalation. Beyond narrative purposes, the loan shark introduces random modifiers and penalties that reshape your strategy mid-run. The character embodies the game's design philosophy of controlled chaos.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq11" aria-expanded="false" aria-controls="faq11">
+                                <h3>
+                                    How long does a typical run take?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq11" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Most runs conclude within 15-30 minutes, though highly successful runs might extend longer. The relatively short session length makes the game accessible for casual play while maintaining meaningful strategic depth.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq12" aria-expanded="false" aria-controls="faq12">
+                                <h3>
+                                    Are there story elements or narrative progression?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq12" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Payroll emphasizes gameplay over narrative. The loan shark provides setup and motivation, but the focus remains on mechanical interaction and strategic decision-making rather than extensive storytelling.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq13" aria-expanded="false" aria-controls="faq13">
+                                <h3>
+                                    Is there online multiplayer or competitive modes?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq13" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                The leaderboard system provides competitive ranking without direct multiplayer gameplay. You compete against other players' high scores but play solo runs. This asynchronous competition maintains the single-player roguelike experience while enabling community engagement.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq14" aria-expanded="false" aria-controls="faq14">
+                                <h3>
+                                    Will the full release differ significantly from the demo?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq14" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                While the core mechanics remain consistent, the full release will likely expand content through additional symbols, refined balance, and expanded modes. However, the fundamental gameplay experience demonstrated in the demo should remain central to the full version.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq15" aria-expanded="false" aria-controls="faq15">
+                                <h3>
+                                    What platforms will support Payroll at launch?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq15" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Payroll will launch on PC via Steam and Itch.io. Console versions have not been announced but might be considered for post-launch support depending on player interest and demand.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq16" aria-expanded="false" aria-controls="faq16">
+                                <h3>
+                                    How does the symbol shop work?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq16" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                After completing each debt, you visit a shop where you select new symbols to add to your dice. The Green Die and Blue Die modes expand available options, allowing greater customization. Symbol selection shapes your future earning potential and strategic direction.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq17" aria-expanded="false" aria-controls="faq17">
+                                <h3>
+                                    Is Payroll appropriate for younger players?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq17" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Payroll contains no graphic content or inappropriate material. The loan shark antagonist uses humor rather than genuine threat. However, the strategic depth and challenge level suit older players. Younger audiences might struggle with decision complexity, though younger strategy game enthusiasts could find it engaging.
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq18" aria-expanded="false" aria-controls="faq18">
+                                <h3>
+                                    Will there be free updates after launch?
+                                </h3>
+                            </button>
+                        </h2>
+
+                        <div id="faq18" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Based on the developer's engagement during the demo phase, post-launch support seems likely. However, official announcements regarding a specific update roadmap have not been made. The commitment to refinement during development suggests ongoing support is probable.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- FAQ Section End -->
+
+     <!-- Footer Start -->
+    <footer class="site-footer pt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href="./" class="bg_center_contain"></a>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li><a href="./news">News</a></li>
+                            <li><a href="./reviews">Reviews</a></li>
+                            <li><a href="articles">Articles</a></li>
+                            <li><a href="./walkthroughs">Walkthroughs</a></li>
+                            <li><a href="./about-us">About US</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Customer Support
+                        </h3>
+                        <ul>
+                            <li><a href="./casino-games">Casino Games</a></li>
+                            <li><a href="./slot-games">Slot Games</a></li>                         
+                            <li><a href="./terms-conditions">Terms & Conditions </a></li>
+                            <li><a href="./privacy-policy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                      <div class="footer-contact">
+                        <h3>
+                            Get in Touch
+                        </h3>
+                        <p class="mb-3">
+                            Have questions about our products? We’re here to help.
+                        </p>                       
+                        <p class="text_theme mb-2">
+                            Phone
+                        </p>
+                        <p class="mb-3 text_white">
+                            <a href="tel:+17788970544">+1 778-897-0544</a>
+                        </p>
+                        <p class="text_theme mb-2">
+                            Address
+                        </p>
+                        <p class="text_white">
+                            <a href="https://maps.app.goo.gl/bbmBLiC5b71tKLVC6">225 W 8th Ave, Suite 300
+                                Vancouver, BC V5Y 1N3
+                                Canada</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+               <p>Copyright © 2026 <a class="text_theme" href="./"> studioz-game.com </a> All Rights Reserved.</p>
+                    <div class="ssl_logo">
+                        <div class="ssl_logo_inner bg-contain" style="background-image: url(assets/images/ssl.png);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+
+
+    <button id="topBtn" class="show">
+        ↑
+    </button>
+
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/filters-data.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/render.js"></script>
+    <script src="./assets/js/filters.js"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>
