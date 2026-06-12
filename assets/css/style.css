@@ -5003,6 +5003,7 @@ div#data-footer-container h2 {
     justify-content: center;
     border-radius: 50%;
     font-weight: bold;
+    overflow: hidden;
 }
 
 .slot_intro_meta {
