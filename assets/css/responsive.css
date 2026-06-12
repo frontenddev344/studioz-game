@@ -98,6 +98,9 @@
         flex-direction: column;
         gap: 15px;
     }
+.brand-logo {
+    margin-left: 0;
+}
 }
 
 

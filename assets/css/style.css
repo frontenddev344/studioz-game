@@ -559,6 +559,9 @@ span.theme {
     color: rgba(255, 255, 255, 0.5);
     font-weight: 500;
 }
+.brand-logo , nav.desktop-nav.nav-right{
+    margin-left: auto;
+}
 
 
 .search-overlay-bar {
@@ -3088,6 +3091,7 @@ video {
     max-width: 80%;
     margin: 0 auto;
 }
+
 div#data-footer-container {
     max-width: 80%;
     margin: 0 auto;
