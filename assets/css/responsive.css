@@ -200,6 +200,9 @@
         height: 52px;
         font-size: 0.95rem;
     }
+    .site-footer .footer-content p {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width:575px) {
