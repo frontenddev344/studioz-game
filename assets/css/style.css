@@ -4588,7 +4588,55 @@ div#data-footer-container h2 {
 .casino_page_intro_card p:last-child {
     margin-bottom: 0;
 }
+.affiliate-disclosure {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
 
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+
+    padding: 16px 18px;
+    margin-bottom: 24px;
+
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.affiliate-disclosure-icon {
+    color: var(--primary);
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.affiliate-disclosure-content strong {
+    display: block;
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.affiliate-disclosure-content p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .affiliate-disclosure {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .affiliate-disclosure-content p {
+        font-size: 0.85rem;
+    }
+}
 
 .casino_games_search {
     width: 100%;
