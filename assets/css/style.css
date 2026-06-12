@@ -2625,7 +2625,40 @@ video {
     height: 100%;
     max-width: 150px;
 }
+.responsible-resources {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
 
+.responsible-resources h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.responsible-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    justify-content: center;
+}
+
+.responsible-links li {
+    margin: 0;
+}
+
+.responsible-links a {
+    color: var(--accent);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.responsible-links a:hover {
+    opacity: 0.8;
+}
 
 .footer-top {
     display: grid;
