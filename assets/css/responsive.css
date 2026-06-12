@@ -200,8 +200,8 @@
         height: 52px;
         font-size: 0.95rem;
     }
-    .site-footer .footer-content p {
-        text-align: center;
+    .site-footer .footer-content .footer-bottom p {
+        text-align: center !important;
     }
 }
 
