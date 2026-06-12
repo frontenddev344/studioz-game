@@ -166,7 +166,40 @@
     .slot_card {
         flex-direction: column;
     }
+    .age-modal {
+        padding: 20px;
+    }
 
+    .age-modal-content {
+        width: 100%;
+        max-width: 450px;
+        padding: 30px 24px;
+        border-radius: 20px;
+    }
+
+    .age-logo {
+        width: 90px;
+        margin-bottom: 16px;
+    }
+
+    .age-modal-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .age-modal-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .age-input {
+        height: 52px;
+        font-size: 16px; /* prevents iOS zoom */
+    }
+
+    .butns {
+        height: 52px;
+        font-size: 0.95rem;
+    }
 }
 
 @media screen and (max-width:575px) {
@@ -236,6 +269,38 @@
         margin: 0 auto;
         background-size: cover;
     }
+    .age-modal {
+        padding: 15px;
+    }
+
+    .age-modal-content {
+        padding: 24px 20px;
+        border-radius: 18px;
+    }
+
+    .age-logo {
+        width: 75px;
+    }
+
+    .age-modal-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .age-modal-content p {
+        font-size: 0.9rem;
+        margin-bottom: 18px;
+    }
+
+    .age-input {
+        height: 50px;
+        padding: 0 14px;
+    }
+
+    .butns {
+        width: 100%;
+        height: 50px;
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -251,5 +316,20 @@
     }
     .section_heading {
         font-size: 1.8rem;
+    }
+    .age-modal-content {
+        padding: 20px 16px;
+    }
+
+    .age-logo {
+        width: 65px;
+    }
+
+    .age-modal-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .age-modal-content p {
+        font-size: 0.85rem;
     }
 }
