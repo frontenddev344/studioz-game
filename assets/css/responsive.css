@@ -206,6 +206,13 @@
     .faq-section .accordion-button h3 {
         font-size: 1.3rem;
     }
+    .news_content h1 {
+        max-width:95%;
+    }
+    .hero-banner-section.sub_banner.news_banner .hero-map-card ,div#article-body-container,div#data-footer-container{
+        max-width: 95%;
+   
+    }
 }
 
 @media screen and (max-width:575px) {
