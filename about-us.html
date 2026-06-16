@@ -450,61 +450,7 @@
 
 
     
-    <!-- Age Verification Modal -->
-     <div id="ageVerification" class="age-modal">
-        <div class="age-modal-content">
-            <img loading="lazy" src="./assets/images/logo.png" alt="Studioz Game Logo" class="age-logo">
-            <h2 class="age_title mb-3">Age Verification</h2>
-            <p>
-                Studioz Game have content which is intended for players aged 18 and over.
-            </p>
-            <p>Please enter your age to continue.</p>
-            <input type="number" id="userAge" min="1" max="120" placeholder="Enter your age" class="age-input">
-            <p id="ageError" class="age-error mb-3"></p>
-            <div class="age-actions">
-                <button id="verifyAge" class="butns">Confirm Age</button>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var modal = document.getElementById("ageVerification");
-            var verifyBtn = document.getElementById("verifyAge");
-            var ageInput = document.getElementById("userAge");
-            var error = document.getElementById("ageError");
-
-            error.style.display = "none";
-
-            if (sessionStorage.getItem("ageVerified") === "true") {
-                modal.style.display = "none";
-                return;
-            }
-
-            modal.style.display = "flex";
-
-            verifyBtn.addEventListener("click", function () {
-                error.style.display = "none";
-                var age = parseInt(ageInput.value.trim(), 10);
-                if (isNaN(age) || age < 1) {
-                    error.textContent = "Please enter a valid age.";
-                    error.style.display = "block";
-                    return;
-                }
-                if (age < 18) {
-                    error.textContent = "This site covers mature-rated games. You must be 18 or older to continue.";
-                    error.style.display = "block";
-                    return;
-                }
-                sessionStorage.setItem("ageVerified", "true");
-                modal.style.display = "none";
-            });
-
-            ageInput.addEventListener("keypress", function (e) {
-                if (e.key === "Enter") { verifyBtn.click(); }
-            });
-        });
-    </script>
     <script src="./assets/js/jquery.js"></script>
     
     <script src="./assets/js/aos.js"></script>
