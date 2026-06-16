@@ -566,6 +566,47 @@
             document.body.classList.remove('age-banner-visible');
         });
     })();
+    </script>
+    <div class="card cookie-alert">
+        <div class="card-body">
+            <h4 class="card-title">&#x1F36A;</h4>
+            <h5 class="card-title">Use of cookies</h5>
+            <p class="card-text">
+                This website uses cookies to provide you with the best user experience.
+                By continuing to use this website, you agree to the use of cookies.
+                For more information, see our
+                <a href="privacy-policy">Privacy Policy</a>.
+            </p>
+            <div class="btn-toolbar justify-content-start gap-2">
+                <a href="javascript:void(0)" class="butn black accept-cookies">Accept</a>
+                <a href="javascript:void(0)" class="butn black reject-cookies">Reject</a>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function () {
+        "use strict";
+        var cookieAlert = document.querySelector(".cookie-alert");
+        var acceptBtn   = document.querySelector(".accept-cookies");
+        var rejectBtn   = document.querySelector(".reject-cookies");
+        if (!cookieAlert) return;
+        var CONSENT_KEY = "cookieConsent";
+        var consent = localStorage.getItem(CONSENT_KEY);
+        if (!consent) { cookieAlert.classList.add("show"); }
+        else { cookieAlert.classList.remove("show"); }
+        if (acceptBtn) {
+            acceptBtn.addEventListener("click", function () {
+                localStorage.setItem(CONSENT_KEY, "accepted");
+                cookieAlert.classList.remove("show");
+            });
+        }
+        if (rejectBtn) {
+            rejectBtn.addEventListener("click", function () {
+                localStorage.setItem(CONSENT_KEY, "rejected");
+                cookieAlert.classList.remove("show");
+            });
+        }
+    })();
     </script></body>
 
 </html>
