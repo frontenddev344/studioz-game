@@ -120,7 +120,20 @@
     --transition-normal: 0.25s ease;
     --transition-slow: 0.4s ease;
 }
+/* Hide desktop search button */
+#searchExpandBtn {
+    display: none !important;
+}
 
+/* Hide search overlay bar */
+#searchBarContainer {
+    display: none !important;
+}
+
+/* Hide mobile search button */
+#mobileSearchBtn {
+    display: none !important;
+}
 /* Global CSS Start */
 html {
     font-size: 1rem;
@@ -1632,7 +1645,7 @@ nav.desktop-nav.nav-right {
 
 .games-list {
     display: none;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-bottom: 1rem;
 }
@@ -2611,6 +2624,7 @@ video {
 /* Footer CSS Start */
 .site-footer {
     color: #fff;
+    padding-bottom: 40px;
 }
 
 .footer-logo p {

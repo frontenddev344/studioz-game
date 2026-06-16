@@ -23,7 +23,9 @@
         display: flex;
     }
 
-
+    .nav-container {
+        flex-direction: row-reverse;
+    }
 
     .hero-map-card {
         grid-template-columns: 1fr;
