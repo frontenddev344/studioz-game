@@ -1,24 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/style.css?v=1.1">
     <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="canonical" href="https://frontenddev344.github.io/studioz-game/subway-descent-the-station-mystery">
-    <meta name="description" content="Read about Subway Descent: The Station Mystery on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta name="description" content="Subway Descent: The Station Mystery review — a claustrophobic horror adventure set in an abandoned underground station. Preview on Studioz Game.">
     <meta property="og:title" content="Subway Descent: The Station Mystery">
-    <meta property="og:description" content="Read about Subway Descent: The Station Mystery on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta property="og:description" content="Subway Descent: The Station Mystery review — a claustrophobic horror adventure set in an abandoned underground station. Preview on Studioz Game.">
     <meta property="og:url" content="https://frontenddev344.github.io/studioz-game/subway-descent-the-station-mystery">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://frontenddev344.github.io/studioz-game/assets/images/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Subway Descent: The Station Mystery">
-    <meta name="twitter:description" content="Read about Subway Descent: The Station Mystery on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta name="twitter:description" content="Subway Descent: The Station Mystery review — a claustrophobic horror adventure set in an abandoned underground station. Preview on Studioz Game.">
     <meta name="twitter:image" content="https://frontenddev344.github.io/studioz-game/assets/images/logo.png">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <title>Subway Descent: The Station Mystery — Studioz Game</title>
@@ -40,7 +40,7 @@
                 </nav>
                 <div class="brand-logo">
                     <a href="./">
-                        <img loading="lazy" src="./assets/images/logo.png" alt=" Logo">
+                        <img loading="lazy" src="./assets/images/logo.png" alt="Studioz Game Logo">
                     </a>
                 </div>
                 <nav class="desktop-nav nav-right">
@@ -237,7 +237,7 @@
             <div class="footer-content">
                 <div class="footer-top">
                     <div class="footer-logo">
-                        <a href="./" class="bg_center_contain"></a>
+                        <a href="./" class="bg_center_contain"><img src="./assets/images/logo.png" alt="Studioz Game" width="140" loading="lazy"></a>
                     </div>
                     <div class="footer-links">
                         <h3>
@@ -302,26 +302,28 @@
     <script src="./assets/js/jquery.js"></script>
     
     <script>
-        document.getElementById('walkthroughSearch').addEventListener('keyup', function () {
-            let filter = this.value.toLowerCase();
-            let sections = document.querySelectorAll('.walkthrough_sections');
-
-            sections.forEach(section => {
-                let cards = section.querySelectorAll('.walkthrough_cards');
-                let hasVisibleCards = false;
-
-                cards.forEach(card => {
-                    let text = card.textContent.toLowerCase();
-                    if (text.includes(filter)) {
-                        card.style.display = "";
-                        hasVisibleCards = true;
-                    } else {
-                        card.style.display = "none";
-                    }
+        (function(){
+            var wsEl = document.getElementById('walkthroughSearch');
+            if (!wsEl) return;
+            wsEl.addEventListener('keyup', function () {
+                var filter = this.value.toLowerCase();
+                var sections = document.querySelectorAll('.walkthrough_sections');
+                sections.forEach(function(section) {
+                    var cards = section.querySelectorAll('.walkthrough_cards');
+                    var hasVisibleCards = false;
+                    cards.forEach(function(card) {
+                        var text = card.textContent.toLowerCase();
+                        if (text.includes(filter)) {
+                            card.style.display = "";
+                            hasVisibleCards = true;
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                    section.style.display = hasVisibleCards ? "" : "none";
                 });
-                section.style.display = hasVisibleCards ? "" : "none";
             });
-        });
+        })();
     </script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/filters-data.js"></script>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="assets/css/style.css?v=1.1">
     <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="canonical" href="https://frontenddev344.github.io/studioz-game/blue-prince">
-    <meta name="description" content="Read about Blue Prince on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta name="description" content="Blue Prince review — explore a procedurally generated Victorian mansion, solve puzzles, and uncover secrets in this acclaimed 2025 roguelite adventure on PC and console.">
     <meta property="og:title" content="Blue Prince">
-    <meta property="og:description" content="Read about Blue Prince on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta property="og:description" content="Blue Prince review — explore a procedurally generated Victorian mansion, solve puzzles, and uncover secrets in this acclaimed 2025 roguelite adventure on PC and console.">
     <meta property="og:url" content="https://frontenddev344.github.io/studioz-game/blue-prince">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://frontenddev344.github.io/studioz-game/assets/images/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blue Prince">
-    <meta name="twitter:description" content="Read about Blue Prince on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta name="twitter:description" content="Blue Prince review — explore a procedurally generated Victorian mansion, solve puzzles, and uncover secrets in this acclaimed 2025 roguelite adventure on PC and console.">
     <meta name="twitter:image" content="https://frontenddev344.github.io/studioz-game/assets/images/logo.png">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <title>Blue Prince — Studioz Game</title>
@@ -41,7 +41,7 @@
                 </nav>
                 <div class="brand-logo">
                     <a href="./">
-                        <img loading="lazy" src="./assets/images/logo.png" alt=" Logo">
+                        <img loading="lazy" src="./assets/images/logo.png" alt="Studioz Game Logo">
                     </a>
                 </div>
                 <nav class="desktop-nav nav-right">
@@ -196,13 +196,13 @@
                 </div>
 
                 <div class="thumbnail_grid">
-                    <img loading="lazy" class="thumb" src="./assets/images/blue_prince_1.jpg" onclick="setSlide(1)" alt="">
+                    <img loading="lazy" class="thumb" src="./assets/images/blue_prince_1.jpg" onclick="setSlide(1)" alt="Blue Prince gameplay screenshot 1">
 
-                    <img loading="lazy" class="thumb" src="./assets/images/blue_prince_2.jpg" onclick="setSlide(2)" alt="">
+                    <img loading="lazy" class="thumb" src="./assets/images/blue_prince_2.jpg" onclick="setSlide(2)" alt="Blue Prince gameplay screenshot 2">
 
-                    <img loading="lazy" class="thumb" src="./assets/images/blue_prince_3.jpg" onclick="setSlide(3)" alt="">
+                    <img loading="lazy" class="thumb" src="./assets/images/blue_prince_3.jpg" onclick="setSlide(3)" alt="Blue Prince gameplay screenshot 3">
 
-                    <img loading="lazy" class="thumb" src="./assets/images/blue_prince_4.jpg" onclick="setSlide(4)" alt="">
+                    <img loading="lazy" class="thumb" src="./assets/images/blue_prince_4.jpg" onclick="setSlide(4)" alt="Blue Prince gameplay screenshot 4">
                 </div>
             </div>
 
@@ -218,7 +218,7 @@
             <div class="footer-content">
                 <div class="footer-top">
                     <div class="footer-logo">
-                        <a href="./" class="bg_center_contain"></a>
+                        <a href="./" class="bg_center_contain"><img src="./assets/images/logo.png" alt="Studioz Game" width="140" loading="lazy"></a>
                     </div>
                     <div class="footer-links">
                         <h3>
@@ -280,26 +280,28 @@
     <script src="./assets/js/jquery.js"></script>
     
     <script>
-        document.getElementById('walkthroughSearch').addEventListener('keyup', function () {
-            let filter = this.value.toLowerCase();
-            let sections = document.querySelectorAll('.walkthrough_sections');
-
-            sections.forEach(section => {
-                let cards = section.querySelectorAll('.walkthrough_cards');
-                let hasVisibleCards = false;
-
-                cards.forEach(card => {
-                    let text = card.textContent.toLowerCase();
-                    if (text.includes(filter)) {
-                        card.style.display = "";
-                        hasVisibleCards = true;
-                    } else {
-                        card.style.display = "none";
-                    }
+        (function(){
+            var wsEl = document.getElementById('walkthroughSearch');
+            if (!wsEl) return;
+            wsEl.addEventListener('keyup', function () {
+                var filter = this.value.toLowerCase();
+                var sections = document.querySelectorAll('.walkthrough_sections');
+                sections.forEach(function(section) {
+                    var cards = section.querySelectorAll('.walkthrough_cards');
+                    var hasVisibleCards = false;
+                    cards.forEach(function(card) {
+                        var text = card.textContent.toLowerCase();
+                        if (text.includes(filter)) {
+                            card.style.display = "";
+                            hasVisibleCards = true;
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                    section.style.display = hasVisibleCards ? "" : "none";
                 });
-                section.style.display = hasVisibleCards ? "" : "none";
             });
-        });
+        })();
     </script>
     <script src="./assets/js/aos.js"></script>
     <script>

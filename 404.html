@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,7 +39,7 @@
                 </nav>
                 <div class="brand-logo">
                     <a href="./">
-                        <img loading="lazy" src="./assets/images/logo.png" alt=" Logo">
+                        <img loading="lazy" src="./assets/images/logo.png" alt="Studioz Game Logo">
                     </a>
                 </div>
                 <nav class="desktop-nav nav-right">
@@ -131,7 +131,7 @@
             <div class="footer-content">
                 <div class="footer-top">
                     <div class="footer-logo">
-                        <a href="./" class="bg_center_contain"></a>
+                        <a href="./" class="bg_center_contain"><img src="./assets/images/logo.png" alt="Studioz Game" width="140" loading="lazy"></a>
                     </div>
                     <div class="footer-links">
                         <h3>
@@ -209,26 +209,28 @@
 
     <script src="./assets/js/jquery.js"></script>
     <script>
-        document.getElementById('walkthroughSearch').addEventListener('keyup', function () {
-            let filter = this.value.toLowerCase();
-            let sections = document.querySelectorAll('.walkthrough_sections');
-
-            sections.forEach(section => {
-                let cards = section.querySelectorAll('.walkthrough_cards');
-                let hasVisibleCards = false;
-
-                cards.forEach(card => {
-                    let text = card.textContent.toLowerCase();
-                    if (text.includes(filter)) {
-                        card.style.display = "";
-                        hasVisibleCards = true;
-                    } else {
-                        card.style.display = "none";
-                    }
+        (function(){
+            var wsEl = document.getElementById('walkthroughSearch');
+            if (!wsEl) return;
+            wsEl.addEventListener('keyup', function () {
+                var filter = this.value.toLowerCase();
+                var sections = document.querySelectorAll('.walkthrough_sections');
+                sections.forEach(function(section) {
+                    var cards = section.querySelectorAll('.walkthrough_cards');
+                    var hasVisibleCards = false;
+                    cards.forEach(function(card) {
+                        var text = card.textContent.toLowerCase();
+                        if (text.includes(filter)) {
+                            card.style.display = "";
+                            hasVisibleCards = true;
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                    section.style.display = hasVisibleCards ? "" : "none";
                 });
-                section.style.display = hasVisibleCards ? "" : "none";
             });
-        });
+        })();
     </script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/filters-data.js"></script>
