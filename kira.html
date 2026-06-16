@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="canonical" href="https://frontenddev344.github.io/studioz-game/kira">
+    <meta name="description" content="Read about Kira on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta property="og:title" content="Kira">
+    <meta property="og:description" content="Read about Kira on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta property="og:url" content="https://frontenddev344.github.io/studioz-game/kira">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://frontenddev344.github.io/studioz-game/assets/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kira">
+    <meta name="twitter:description" content="Read about Kira on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta name="twitter:image" content="https://frontenddev344.github.io/studioz-game/assets/images/logo.png">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>Kira — Studioz Game</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-container">
+                <button class="menu-toggle" id="menuOpenBtn" aria-label="Open Menu">
+                    <img loading="lazy" src="./assets/images/menu.png" alt="menu_btn">
+                </button>
+                <nav class="desktop-nav nav-left">
+                    <a href="./news" class="nav-item">News</a>
+                    <a href="./reviews" class="nav-item">Reviews</a>
+                    <a href="./articles" class="nav-item">Articles</a>
+
+                </nav>
+                <div class="brand-logo">
+                    <a href="./">
+                        <img loading="lazy" src="./assets/images/logo.png" alt=" Logo">
+                    </a>
+                </div>
+                <nav class="desktop-nav nav-right">
+                    <a href="./walkthroughs" class="nav-item">Walkthroughs</a>
+                    <a href="about-us" class="nav-item ">About Us</a>
+                    <a href="./contact-us" class="nav-item">Contact Us</a>
+                </nav>
+                <button class="search-toggle-btn" id="searchExpandBtn" aria-label="Open Search">
+                    <img loading="lazy" src="./assets/images/search.png" alt="search_icon">
+                </button>
+                <div class="search-overlay-bar" id="searchBarContainer">
+                    <div class="search-bar-inner">
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-field-icon"></i>
+                            <input type="text" id="searchInput" placeholder="Search your Adventure Game..."
+                                autocomplete="off">
+                        </div>
+                        <button class="search-cancel-btn" id="searchCancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-panel-view active" id="mobileMainPanel">
+            <div class="mobile-menu-header">
+                <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">
+                    <img loading="lazy" src="./assets/images/close.png" alt="close_btn">
+                </button>
+                <div class="mobile-menu-logo">
+                    <img loading="lazy" src="./assets/images/logo.png" alt="Adventure Gamers Logo">
+                </div>
+                <button class="search-toggle-btn" id="mobileSearchBtn" aria-label="Open Search">
+                    <img loading="lazy" src="./assets/images/search.png" alt="search_icon">
+                </button>
+            </div>
+
+            <nav class="mobile-nav-links">
+                <a href="./news" class="mobile-link">News</a>
+                <a href="./reviews" class="mobile-link">Reviews</a>
+                <a href="articles" class="mobile-link">Articles</a>
+                <a href="walkthroughs" class="mobile-link">Walkthroughs</a>
+                <a href="about-us" class="mobile-link">About Us</a>
+                <a href="contact-us" class="mobile-link">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+    <!-- Header End -->
+    <!-- Banner Start -->
+    <section class="hero-banner-section sub_banner category">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-map-card" style="background-image: url(./assets/images/kira-1.jpg);">
+                    <div class="notch-svg-wrapper top-right-step">
+                        <svg width="140" height="60" viewBox="0 0 107 45" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0H107V45C107 43.1 107.52 33.34 90.5 33.72H35C25.49 33.72 17.75 26.4 17.51 17.29L17.5 16.42C17.26 7.31 9.52 0 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="notch-svg-wrapper bottom-left-step">
+                        <svg width="140" height="60" viewBox="0 0 107 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0V46H107C97.35 46 89.6 38.52 89.36 29.21L89.35 28.32C89.11 19.01 81.37 11.53 71.85 11.53H16.37C-0.65 11.92 0 1.94 0 0Z"
+                                fill="#000"></path>
+                        </svg>
+                    </div>
+                    <div class="hero-card-content">
+                        <h1 class="hero-title">KIRA</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+    <!-- Content Start -->
+    <section class="game_review_boxes bg_dark">
+        <div class="container">
+
+            <div class="game_review_header py-5">
+                <p class="text-secondary text-center">
+                    Embark on a heartfelt journey through a beautifully illustrated world where
+                    memories hold power, and every choice shapes a young girl's future.
+                </p>
+
+                <div class="game_meta">
+                    <div class="author_info">
+                        <div class="author_avatar">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="8" r="4" fill="currentColor"></circle>
+                                <path d="M4 20C4 16.6863 7.58172 14 12 14C16.4183 14 20 16.6863 20 20"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                            </svg>
+                        </div>
+                        <div class="author_details">
+                            <h6>Kira Review Team</h6>
+                            <span>Coming-of-Age Adventure Review</span>
+                        </div>
+                    </div>
+
+                    <div class="game_date">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle>
+                            <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+
+                        <span>Updated on January 16, 2025</span>
+                    </div>
+                </div>
+
+                <div class="game_intro">
+                    <p>
+                        Kira tells the touching story of a young girl growing up in a world
+                        where memories can be bought, traded, and even stolen. As she searches
+                        for answers about her past, players explore vibrant hand-drawn
+                        environments filled with whimsical characters, emotional encounters,
+                        and thoughtfully designed puzzles. Each challenge is closely tied to
+                        the story's themes of identity, loss, and self-discovery, creating an
+                        experience that feels both personal and meaningful. Supported by a
+                        beautifully composed soundtrack and striking visual style, Kira stands
+                        out as an unforgettable indie adventure that resonates long after the
+                        journey ends.
+                    </p>
+                </div>
+            </div>
+
+            <div class="gallery_wrapper">
+                <div class="main_slider">
+
+                    <img loading="lazy" id="mainImage" src="./assets/images/kira-1.jpg" alt="Game Screenshot">
+
+                    <button class="slider_btn prev" onclick="moveSlide(-1)">
+                        &#10094;
+                    </button>
+
+                    <button class="slider_btn next" onclick="moveSlide(1)">
+                        &#10095;
+                    </button>
+
+                </div>
+
+                <div class="thumbnail_grid">
+
+                    <img loading="lazy" class="thumb active" src="./assets/images/kira-1.jpg" onclick="setSlide(0)"
+                        alt="Thumbnail 1">
+
+                    <img loading="lazy" class="thumb" src="./assets/images/kira-2.jpg" onclick="setSlide(1)" alt="Thumbnail 2">
+
+                    <img loading="lazy" class="thumb" src="./assets/images/kira-3.jpg" onclick="setSlide(2)"
+                        alt="Thumbnail 3">
+
+                    <img loading="lazy" class="thumb" src="./assets/images/kira-4.jpg" onclick="setSlide(3)"
+                        alt="Thumbnail 4">
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+       <!-- Footer Start -->
+    <footer class="site-footer pt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href="./" class="bg_center_contain"></a>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li><a href="./news">News</a></li>
+                            <li><a href="./reviews">Reviews</a></li>
+                            <li><a href="articles">Articles</a></li>
+                            <li><a href="walkthroughs">Walkthroughs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Other Links
+                        </h3>
+                        <ul>
+                            <li><a href="about-us">About Us</a></li>
+                            <li><a href="./terms-conditions">Terms & Conditions </a></li>
+                            <li><a href="./privacy-policy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>
+                            Get in Touch
+                        </h3>
+                        <p class="mb-3">
+                            Have questions about our products? We’re here to help.
+                        </p>
+                        <p class="text_theme mb-2">
+                            Phone
+                        </p>
+                        <p class="mb-3 text_white">
+                            <a href="tel:+17788970544">+1 778-897-0544</a>
+                        </p>
+                        <p class="text_theme mb-2">
+                            Address
+                        </p>
+                        <p class="text_white">
+                            <a href="https://maps.app.goo.gl/bbmBLiC5b71tKLVC6">225 W 8th Ave, Suite 300
+                                Vancouver, BC V5Y 1N3
+                                Canada</a>
+                        </p>
+                    </div>
+                </div>
+                                <div class="footer-disclaimer">
+                    <h3>About Studioz Game</h3>
+                    <p>
+                        <span class="theme">Studioz Game</span> is an independent gaming website dedicated to providing honest reviews, in-depth walkthroughs, and the latest news for adventure and strategy game enthusiasts.
+                    </p>
+                    <p>
+                        Our content is created by passionate gamers for gamers. We cover PC, PlayStation, Xbox, Nintendo, Mac, Linux, iOS, and VR platforms.
+                    </p>
+                </div>
+<div class="footer-legal-disclaimer">
+                    <h3 class="text_theme mb-3">
+                        Disclaimer:
+                    </h3>
+                    <p>
+                        Studioz Game is an independent gaming website and is not affiliated
+                        with, endorsed by, or sponsored by Sony Interactive Entertainment, PlayStation, or any game
+                        publisher unless explicitly stated. All trademarks, logos, and brand names are the property of
+                        their respective owners.
+                    </p>
+                </div> 
+
+
+                <div class="footer-bottom">
+                    <p>Copyright © 2026 <a class="text_theme" href="./"> studioz-game.com </a> All Rights Reserved.</p>
+                    <div class="ssl_logo">
+                        <div class="ssl_logo_inner bg-contain" style="background-image: url(assets/images/ssl.png);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End --> 
+    <button id="topBtn" class="show">
+        ↑
+    </button>
+</div>
+
+
+    
+    <!-- Age Verification Modal -->
+    <div id="ageVerification" class="age-modal">
+        <div class="age-modal-content">
+            <img loading="lazy" src="./assets/images/logo.png" alt="Studioz Game Logo" class="age-logo">
+            <h2 class="age_title mb-3">Age Verification</h2>
+            <p>
+                Studioz Game covers titles that include mature themes such as violence, strong language, and complex narratives. Some content is intended for players aged 18 and over.
+            </p>
+            <p>Please enter your age to continue.</p>
+            <input type="number" id="userAge" min="1" max="120" placeholder="Enter your age" class="age-input">
+            <p id="ageError" class="age-error mb-3"></p>
+            <div class="age-actions">
+                <button id="verifyAge" class="butns">Confirm Age</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modal = document.getElementById("ageVerification");
+            var verifyBtn = document.getElementById("verifyAge");
+            var ageInput = document.getElementById("userAge");
+            var error = document.getElementById("ageError");
+
+            error.style.display = "none";
+
+            if (sessionStorage.getItem("ageVerified") === "true") {
+                modal.style.display = "none";
+                return;
+            }
+
+            modal.style.display = "flex";
+
+            verifyBtn.addEventListener("click", function () {
+                error.style.display = "none";
+                var age = parseInt(ageInput.value.trim(), 10);
+                if (isNaN(age) || age < 1) {
+                    error.textContent = "Please enter a valid age.";
+                    error.style.display = "block";
+                    return;
+                }
+                if (age < 18) {
+                    error.textContent = "This site covers mature-rated games. You must be 18 or older to continue.";
+                    error.style.display = "block";
+                    return;
+                }
+                sessionStorage.setItem("ageVerified", "true");
+                modal.style.display = "none";
+            });
+
+            ageInput.addEventListener("keypress", function (e) {
+                if (e.key === "Enter") { verifyBtn.click(); }
+            });
+        });
+    </script>
+    <script src="./assets/js/jquery.js"></script>
+    
+    <script>
+        document.getElementById('walkthroughSearch').addEventListener('keyup', function () {
+            let filter = this.value.toLowerCase();
+            let sections = document.querySelectorAll('.walkthrough_sections');
+
+            sections.forEach(section => {
+                let cards = section.querySelectorAll('.walkthrough_cards');
+                let hasVisibleCards = false;
+
+                cards.forEach(card => {
+                    let text = card.textContent.toLowerCase();
+                    if (text.includes(filter)) {
+                        card.style.display = "";
+                        hasVisibleCards = true;
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+                section.style.display = hasVisibleCards ? "" : "none";
+            });
+        });
+    </script>
+    <script src="./assets/js/aos.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const images = [
+                "./assets/images/kira-1.jpg",
+                "./assets/images/kira-2.jpg",
+                "./assets/images/kira-3.jpg",
+                "./assets/images/kira-4.jpg"
+            ];
+
+            let currentIndex = 0;
+            let autoPlayInterval;
+
+            const mainImage = document.getElementById("mainImage");
+            const thumbs = document.querySelectorAll(".thumb");
+
+              function updateSlider(index) {
+                mainImage.src = images[index];
+                mainImage.alt = `Game Screenshot ${index + 1}`;
+
+                thumbs.forEach(thumb => thumb.classList.remove("active"));
+
+                // Don't activate any thumbnail for the cover image
+                if (index > 0) {
+                    thumbs[index - 1].classList.add("active");
+                }
+
+                currentIndex = index;
+            }
+
+            window.moveSlide = function (direction) {
+                const nextIndex =
+                    (currentIndex + direction + images.length) % images.length;
+
+                updateSlider(nextIndex);
+                resetAutoPlay();
+            };
+
+            window.setSlide = function (index) {
+                updateSlider(index);
+                resetAutoPlay();
+            };
+
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(() => {
+                    const nextIndex = (currentIndex + 1) % images.length;
+                    updateSlider(nextIndex);
+                }, 3000);
+            }
+
+            function resetAutoPlay() {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+
+            updateSlider(0);
+            startAutoPlay();
+        });
+
+    </script>
+    <script src="./assets/js/filters-data.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/render.js"></script>
+    <script src="./assets/js/filters.js"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>
