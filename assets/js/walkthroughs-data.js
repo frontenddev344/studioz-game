@@ -53,7 +53,7 @@ const walkthroughList = [
     ["catyph", "Catyph: The Kunci Experiment", "assets/images/catyph-kunci-experiment-img.jpg"],
     ["challenge-tentacle", "Challenge of the Tentacle", "assets/images/challenge-of-the-tentacle-img.webp"],
     ["day-tentacle", "Day of the Tentacle", "assets/images/day-of-the-tentacle-img.jpg"],
-    ["delores", "DELORES: A Thimbleweed Park Mini Adventure", "assets/delores-a-thimbleweed-park-mini-adventure-img.jpg"],
+    ["delores", "DELORES: A Thimbleweed Park Mini Adventure", "assets/delores_adventure.jpg"],
     ["ecoquest-2", "EcoQuest 2: Lost Secret of the Rainforest", "assets/images/ecoquest-2-lost-secret-of-the-rainforest-img.jpg"],
     ["ecoquest-1", "EcoQuest: The Search for Cetus", "assets/images/ecoquest-the-search-for-cetus-img.webp"],
     ["firmament", "Firmament", "assets/images/Firmament-img.jpg"],
