@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compliance Audit Report — studioz-game.com</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, 'Times New Roman', serif; font-size: 15px; line-height: 1.7; color: #1a1a1a; background: #fff; }
+  .cover { background: #1a1a2e; color: #fff; padding: 60px 48px; }
+  .cover h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+  .cover .subtitle { font-size: 16px; color: #a0b0cc; margin-bottom: 32px; }
+  .cover-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+  .cover-meta-item { background: rgba(255,255,255,0.07); border-radius: 8px; padding: 16px; }
+  .cover-meta-item .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: #7090b0; margin-bottom: 4px; }
+  .cover-meta-item .value { font-size: 14px; font-weight: 600; color: #e0eaf8; }
+  .toc { background: #f8f8f6; border-left: 4px solid #1a1a2e; padding: 32px 40px; margin: 0; }
+  .toc h2 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: #1a1a2e; }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin-bottom: 6px; font-size: 13px; }
+  .toc a { color: #1a4a8a; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .content { padding: 0 48px 60px; max-width: 900px; margin: 0 auto; }
+  h2.section-title { font-size: 22px; font-weight: 700; color: #1a1a2e; margin: 48px 0 20px; padding-top: 16px; border-top: 2px solid #e0e4ec; }
+  h3.subsection { font-size: 16px; font-weight: 700; color: #1a1a2e; margin: 28px 0 10px; }
+  p { margin-bottom: 12px; font-size: 14px; }
+  ul, ol { padding-left: 22px; margin-bottom: 12px; }
+  li { margin-bottom: 5px; font-size: 14px; }
+  .exec-summary { background: #eef3fb; border-radius: 10px; padding: 28px 32px; margin: 32px 0; border-left: 5px solid #1a4a8a; }
+  .exec-summary p { margin-bottom: 8px; font-size: 14px; }
+  .score-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
+  .score-card { border-radius: 8px; padding: 18px 14px; text-align: center; }
+  .score-card .score-num { font-size: 32px; font-weight: 700; line-height: 1; margin-bottom: 4px; }
+  .score-card .score-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 2px; }
+  .score-card .score-sub { font-size: 11px; }
+  .score-critical { background: #fce8e8; }
+  .score-critical .score-num { color: #b91c1c; }
+  .score-critical .score-label { color: #7f1d1d; }
+  .score-high { background: #fff3e0; }
+  .score-high .score-num { color: #c2410c; }
+  .score-high .score-label { color: #7c2d12; }
+  .score-medium { background: #fefce8; }
+  .score-medium .score-num { color: #a16207; }
+  .score-medium .score-label { color: #713f12; }
+  .score-low { background: #f0fdf4; }
+  .score-low .score-num { color: #15803d; }
+  .score-low .score-label { color: #14532d; }
+  .issue-card { border: 1px solid #e0e4ec; border-radius: 10px; margin: 20px 0; overflow: hidden; }
+  .issue-header { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #e0e4ec; }
+  .badge { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 10px; border-radius: 4px; }
+  .badge-critical { background: #fce8e8; color: #b91c1c; }
+  .badge-high { background: #fff3e0; color: #c2410c; }
+  .badge-medium { background: #fefce8; color: #a16207; }
+  .badge-low { background: #f0fdf4; color: #15803d; }
+  .issue-title { font-size: 14px; font-weight: 700; color: #1a1a1a; }
+  .issue-body { padding: 16px 18px; }
+  .issue-body p { font-size: 13px; margin-bottom: 8px; }
+  .issue-body ul { font-size: 13px; }
+  .issue-body .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #666; margin: 12px 0 4px; }
+  .fix-box { background: #f0fdf4; border-left: 3px solid #15803d; padding: 10px 14px; border-radius: 0 6px 6px 0; margin-top: 10px; }
+  .fix-box p { font-size: 13px; color: #14532d; margin-bottom: 4px; }
+  .evidence-box { background: #f5f5f5; border-left: 3px solid #aaa; padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 8px 0; font-family: monospace; font-size: 12px; color: #333; word-break: break-all; }
+  .overview-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 20px 0; }
+  .overview-table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-size: 12px; font-weight: 600; }
+  .overview-table td { padding: 9px 14px; border-bottom: 1px solid #e8e8e8; vertical-align: top; }
+  .overview-table tr:nth-child(even) td { background: #fafafa; }
+  .status-pass { color: #15803d; font-weight: 600; }
+  .status-fail { color: #b91c1c; font-weight: 600; }
+  .status-partial { color: #a16207; font-weight: 600; }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 6px 0; font-size: 13px; border-bottom: 1px solid #f0f0f0; display: flex; align-items: flex-start; gap: 8px; }
+  .checklist li:last-child { border-bottom: none; }
+  .check-pass::before { content: "✓"; color: #15803d; font-weight: 700; flex-shrink: 0; }
+  .check-fail::before { content: "✗"; color: #b91c1c; font-weight: 700; flex-shrink: 0; }
+  .check-partial::before { content: "~"; color: #a16207; font-weight: 700; flex-shrink: 0; }
+  .priority-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 20px 0; }
+  .priority-table th { background: #f0f0ee; padding: 10px 14px; text-align: left; font-size: 12px; font-weight: 700; border-bottom: 2px solid #ddd; }
+  .priority-table td { padding: 9px 14px; border-bottom: 1px solid #eee; vertical-align: top; }
+  .priority-table tr:hover td { background: #fafaf8; }
+  footer { background: #f5f5f3; padding: 24px 48px; font-size: 12px; color: #888; border-top: 1px solid #ddd; }
+  @media print {
+    .cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .issue-card { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div style="font-size:12px; color:#6080a0; text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">Compliance & Monetization Readiness Audit</div>
+  <h1>studioz-game.com</h1>
+  <div class="subtitle">Full-Site Compliance Review — Google AdSense / Ad Manager / Search Console / Hosting & Affiliate Platforms</div>
+  <div style="font-size:13px; color:#8090b0; margin-top:8px;">Audit Date: June 16, 2026 &nbsp;|&nbsp; Auditor: Claude (Anthropic) &nbsp;|&nbsp; Version: 1.0</div>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <div class="label">Overall Risk Rating</div>
+      <div class="value" style="color:#ff6b6b;">HIGH — Not Ready for Ad Networks</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="label">Critical Issues Found</div>
+      <div class="value" style="color:#ff6b6b;">7 Critical</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="label">Total Issues Found</div>
+      <div class="value">21 Across All Categories</div>
+    </div>
+  </div>
+</div>
+
+<div class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#exec">Executive Summary</a></li>
+    <li><a href="#overview">At-a-Glance Compliance Overview</a></li>
+    <li><a href="#critical">Critical Issues (Must Fix Before Any Submission)</a></li>
+    <li><a href="#high">High Severity Issues</a></li>
+    <li><a href="#medium">Medium Severity Issues</a></li>
+    <li><a href="#low">Low Severity Issues</a></li>
+    <li><a href="#positives">Positive Findings</a></li>
+    <li><a href="#priority">Prioritised Fix Roadmap</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</div>
+
+<div class="content">
+
+<div id="exec">
+<h2 class="section-title">1. Executive Summary</h2>
+<div class="exec-summary">
+  <p><strong>The site is NOT currently ready for submission to Google AdSense, Google Ad Manager, or major affiliate networks.</strong> The audit uncovered 7 critical issues that would almost certainly trigger immediate rejection or suspension, and a further 14 medium-to-high severity issues that would reduce ad serving, limit monetisation, and damage trust signals over time.</p>
+  <p>The most serious problems are: a broken canonical URL configuration pointing all pages to a GitHub subdomain instead of the live domain; a large volume of near-identical fictional game entries that constitute thin/fabricated content; individual article pages that are blocked from search indexing (noindex); an age-gate popup that appears on every page but is trivially bypassable, serving no real protection function; and the absence of any verifiable real-author E-E-A-T signals (no real names, photos, bios, or credentials).</p>
+  <p>The site does have several positive foundations — Privacy Policy, Terms & Conditions, contact details, a physical address, cookie consent — but each of these pages also contains implementation errors that undermine their value.</p>
+</div>
+
+<div class="score-grid">
+  <div class="score-card score-critical">
+    <div class="score-num">7</div>
+    <div class="score-label">Critical</div>
+    <div class="score-sub">Immediate action required</div>
+  </div>
+  <div class="score-card score-high">
+    <div class="score-num">6</div>
+    <div class="score-label">High</div>
+    <div class="score-sub">Fix before submission</div>
+  </div>
+  <div class="score-card score-medium">
+    <div class="score-num">5</div>
+    <div class="score-label">Medium</div>
+    <div class="score-sub">Fix within 30 days</div>
+  </div>
+  <div class="score-card score-low">
+    <div class="score-num">3</div>
+    <div class="score-label">Low</div>
+    <div class="score-sub">Fix within 60 days</div>
+  </div>
+</div>
+</div>
+
+<div id="overview">
+<h2 class="section-title">2. At-a-Glance Compliance Overview</h2>
+<table class="overview-table">
+  <thead>
+    <tr><th>Category</th><th>Status</th><th>Summary</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Canonical URL Configuration</td><td><span class="status-fail">FAIL</span></td><td>All canonicals point to GitHub Pages subdomain, not live domain</td></tr>
+    <tr><td>SSL / HTTPS</td><td><span class="status-pass">PASS</span></td><td>Site loads over HTTPS (Cloudflare)</td></tr>
+    <tr><td>Privacy Policy</td><td><span class="status-partial">PARTIAL</span></td><td>Present and detailed but email is obfuscated/redacted in scraped view</td></tr>
+    <tr><td>Terms & Conditions</td><td><span class="status-pass">PASS</span></td><td>Present with affiliate disclosure</td></tr>
+    <tr><td>Contact Page</td><td><span class="status-partial">PARTIAL</span></td><td>Present with address & phone; email obfuscated; "operating hours" text is nonsensical for a website</td></tr>
+    <tr><td>Cookie Consent</td><td><span class="status-partial">PARTIAL</span></td><td>Banner present but fires after age-gate, not before; no granular controls</td></tr>
+    <tr><td>Age Gate</td><td><span class="status-fail">FAIL</span></td><td>Populates on every page; trivially bypassable; could signal adult content to ad platforms</td></tr>
+    <tr><td>E-E-A-T Signals</td><td><span class="status-fail">FAIL</span></td><td>No real author bios, photos, credentials, or verifiable expertise</td></tr>
+    <tr><td>Content Quality — News/Walkthroughs</td><td><span class="status-partial">PARTIAL</span></td><td>Some real game coverage (Hollow Knight, Indiana Jones); large fictional game catalog is thin</td></tr>
+    <tr><td>Indexability</td><td><span class="status-fail">FAIL</span></td><td>Several article pages have noindex,nofollow meta tags</td></tr>
+    <tr><td>robots.txt / sitemap.xml</td><td><span class="status-fail">FAIL</span></td><td>Could not be confirmed accessible; needs verification</td></tr>
+    <tr><td>Open Graph / Social Meta</td><td><span class="status-fail">FAIL</span></td><td>All OG image URLs point to GitHub Pages, not live domain</td></tr>
+    <tr><td>Structured Data / Schema</td><td><span class="status-fail">FAIL</span></td><td>No schema markup detected on any page reviewed</td></tr>
+    <tr><td>Author Attribution</td><td><span class="status-fail">FAIL</span></td><td>"Alex Turner", "Lisa Rose", "John Snow" with no photos, bios, or credibility signals</td></tr>
+    <tr><td>Affiliate Disclosure</td><td><span class="status-partial">PARTIAL</span></td><td>Disclosure in T&C but not inline on article pages as required by FTC/ASA</td></tr>
+    <tr><td>Duplicate Content</td><td><span class="status-fail">FAIL</span></td><td>Homepage game cards appear duplicated across multiple carousel tabs</td></tr>
+    <tr><td>Fictional Content Misrepresented as Real</td><td><span class="status-fail">FAIL</span></td><td>Invented games (RoadRush Legends 5, Agent Zero, etc.) presented as real news</td></tr>
+    <tr><td>Copyright / IP Risk</td><td><span class="status-partial">PARTIAL</span></td><td>Walkthroughs for real games (Hollow Knight, Indiana Jones) may use uncleared screenshots</td></tr>
+    <tr><td>Page Speed / Core Web Vitals</td><td><span class="status-partial">PARTIAL</span></td><td>No performance data available; complex carousel JS on homepage is a concern</td></tr>
+    <tr><td>Mobile Responsiveness</td><td><span class="status-pass">PASS</span></td><td>Viewport meta present; responsive design indicated</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div id="critical">
+<h2 class="section-title">3. Critical Issues</h2>
+<p style="margin-bottom:20px; font-size:14px; color:#666;"><em>These issues will cause immediate rejection or suspension when submitting to Google AdSense, Ad Manager, or major affiliate networks. Fix all of these before any submission attempt.</em></p>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-critical">Critical</span>
+    <span class="issue-title">C-01 — All Canonical URLs Point to a GitHub Pages Subdomain (Not the Live Domain)</span>
+  </div>
+  <div class="issue-body">
+    <div class="label">Description</div>
+    <p>Every single page on studioz-game.com declares a canonical URL pointing to <code>frontenddev344.github.io/studioz-game/</code>. This tells Google (and all search engines) that the authoritative version of every page lives on a GitHub subdomain — not the live website.</p>
+    <div class="evidence-box">Homepage: &lt;link rel="canonical" href="https://frontenddev344.github.io/studioz-game/" /&gt;
+About Us: &lt;link rel="canonical" href="https://frontenddev344.github.io/studioz-game/about-us" /&gt;
+Privacy Policy: &lt;link rel="canonical" href="https://frontenddev344.github.io/studioz-game/privacy-policy" /&gt;
+(Same pattern on ALL pages reviewed)</div>
+    <div class="label">Why This is Critical</div>
+    <ul>
+      <li>Google will credit all SEO value and indexing signals to the GitHub subdomain, not studioz-game.com.</li>
+      <li>For Google AdSense/Ad Manager, the domain you submit must match the canonical — this mismatch can cause immediate rejection ("unverifiable domain ownership" or "content policy evaluation failure").</li>
+      <li>All Open Graph and Twitter Card image URLs also point to the GitHub domain, breaking social sharing previews.</li>
+      <li>The GitHub repo may be public, exposing the site's source code to competitors and potential scrapers.</li>
+    </ul>
+    <div class="fix-box">
+      <p><strong>Fix:</strong> Update every canonical tag to point to <code>https://studioz-game.com/[path]</code>. Update all OG image URLs to use the live domain. This is the single highest-priority fix on the entire site.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-critical">Critical</span>
+    <span class="issue-title">C-02 — Age Gate Popup on Every Page Signals Adult/Mature Content to Ad Platforms</span>
+  </div>
+  <div class="issue-body">
+    <div class="label">Description</div>
+    <p>Every page — including the Privacy Policy, About Us, and Contact pages — displays an age-verification gate: <em>"This site covers mature-rated games (18+) including violence, strong language, and complex themes. By continuing you confirm you are 18 or older."</em></p>
+    <div class="label">Why This is Critical</div>
+    <ul>
+      <li><strong>Google AdSense categorises sites with age gates as potentially adult-oriented</strong>, which triggers enhanced content review and can lead to rejection under their "Adult Content" policy, even if actual content is game reviews.</li>
+      <li>The gate is trivially bypassable (clicking "I am 18+") and stores no session data, so it provides no real protection — making it purely performative risk with no benefit.</li>
+      <li>It appears on legal pages (Privacy Policy) where it is semantically absurd and further undermines trust with reviewers.</li>
+      <li>Many affiliate networks (e.g., CJ, Rakuten) have strict policies about displaying such gates without a documented COPPA/age-verification compliance system.</li>
+    </ul>
+    <div class="fix-box">
+      <p><strong>Fix:</strong> Remove the age gate entirely, OR restrict it only to content pages that contain actual mature-rated game content, NOT to legal/informational pages. Most importantly — if the site's content is genuinely suitable for AdSense (which it appears to be — game reviews/walkthroughs), remove the gate entirely and reclassify the content accordingly. The gate creates more compliance risk than it solves.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-critical">Critical</span>
+    <span class="issue-title">C-03 — Fictional Games Presented as Real News / Thin & Fabricated Content</span>
+  </div>
+  <div class="issue-body">
+    <div class="label">Description</div>
+    <p>A significant portion of the site's "Latest Gaming News" section covers games that do not appear to exist — including <em>RoadRush Legends 5</em>, <em>Agent Zero: First Strike</em>, <em>Shadow Wasteland</em>, <em>Starfall Frontier</em>, <em>Echo of the Forgotten Vale</em>, and others. These are presented identically to real game coverage, with author names, dates, and realistic-looking thumbnails.</p>
+    <p>The "Latest Adventure Games Released" and "Top Adventure Games" sections also feature entirely invented titles: <em>The Clockwork Mansion</em>, <em>Last Signal</em>, <em>The Wanderer</em>, <em>Hollow Signal</em>, <em>Kira</em>, <em>Parallel Shift</em>, <em>Chromograph</em>, etc. — each with star ratings, platform tags, and descriptions indistinguishable from real games.</p>
+    <div class="label">Why This is Critical</div>
+    <ul>
+      <li><strong>Google's content policies explicitly prohibit "misleading content"</strong> — presenting fabricated news as factual journalism is a direct policy violation.</li>
+      <li>Under Google's Helpful Content guidelines, content that cannot be verified as true or useful to users is classified as low-quality/spam.</li>
+      <li>AdSense reviewers and automated systems check whether article content corresponds to real events/products. Invented games with invented "news" articles will be flagged.</li>
+      <li>This pattern — invented content presented as real editorial — is a known characteristic of link farms and low-quality content sites that Google actively penalises.</li>
+    </ul>
+    <div class="fix-box">
+      <p><strong>Fix Option A (Recommended):</strong> Remove all fictional game entries entirely and replace with real game coverage. The site already has real coverage (Hollow Knight, Indiana Jones, Palworld, Balatro) — expand this category.</p>
+      <p><strong>Fix Option B:</strong> If fictional game concepts are intentional (original game concepts by the site), clearly label them as "Original Concepts" or "Concept Previews" — not news — with a clear disclaimer.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-critical">Critical</span>
+    <span class="issue-title">C-04 — Article Pages Tagged noindex,nofollow (Invisible to Search Engines)</span>
+  </div>
+  <div class="issue-body">
+    <div class="label">Description</div>
+    <p>Multiple content pages are explicitly blocked from search engine indexing using <code>meta robots: noindex, nofollow</code>. Two confirmed examples:</p>
+    <div class="evidence-box">Page: /how-the-reputation-system-shapes-your-gameplay-in-roadrush-legends-5
+meta robots: noindex, nofollow
+
+Page: /the-clockwork-mansion
+meta robots: noindex, nofollow</div>
+    <div class="label">Why This is Critical</div>
+    <ul>
+      <li>Pages that cannot be crawled or indexed provide zero SEO value and cannot be verified by Google during AdSense review.</li>
+      <li>If a large portion of the site's content is noindex'd, it appears "thin" to automated reviewers even if more content exists.</li>
+      <li>Google Search Console will flag these as configuration errors and they will not contribute to domain authority.</li>
+    </ul>
+    <div class="fix-box">
+      <p><strong>Fix:</strong> Audit ALL pages on the site for incorrect noindex/nofollow tags. Remove these tags from any page that should be indexed (all public-facing content pages). Only use noindex on pages that should genuinely be hidden (admin pages, duplicate parameter URLs, thank-you pages).</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-critical">Critical</span>
+    <span class="issue-title">C-05 — Zero Real E-E-A-T Signals (Experience, Expertise, Authoritativeness, Trustworthiness)</span>
+  </div>
+  <div class="issue-body">
+    <div class="label">Description</div>
+    <p>The site lists authors including "Alex Turner," "Lisa Rose," and "John Snow" but none of them have: a real author bio page, a photo, social media links, verifiable publication history, or any credentials. The About Us page makes broad claims of expertise ("veteran players and writers with deep backgrounds") without naming a single real person.</p>
+    <div class="label">Why This is Critical</div>
+    <ul>
+      <li>Google's E-E-A-T guidelines (central to the Helpful Content system) heavily penalise sites where authorship is anonymous or unverifiable.</li>
+      <li>For a gaming review site making editorial claims ("honest reviews," "unbiased coverage"), E-E-A-T failure is a major quality signal problem.</li>
+      <li>AdSense reviewers specifically look for evidence of a real editorial team as part of site authenticity checks.</li>
+      <li>"John Snow" (the GoT character name) as an author attribution looks deliberately fictional, which will not help with trust reviews.</li>
+    </ul>
+    <div class="fix-box">
+      <p><strong>Fix:</strong> Create real author profile pages for each writer with: full real name (or documented pen name with explanation), headshot, short biography, gaming background, and links to external publications or social profiles (e.g., Twitter/X, LinkedIn). Add author bio boxes to all article pages. At minimum, replace "John Snow" with a real or plausible name.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-critical">Critical</span>
+    <span class="issue-title">C-06 — Duplicate/Repeated Content in Game Carousels (Homepage)</span>
+  </div>
+  <div class="issue-body">
+    <div class="label">Description</div>
+    <p>The "Top Adventure Games" section on the homepage contains a carousel/tab system where the exact same 5 game entries (The Clockwork Mansion, Last Signal, The Wanderer, Hollow Signal, Kira) are repeated verbatim across all 8 genre tabs (Popular, Point and Click, Interactive Fiction, Narrative, Exploration, Puzzle, Action, Survival). This means the same content is rendered 8 times on a single page within the same DOM.</p>
+    <div class="label">Why This is Critical</div>
+    <ul>
+      <li>Google's crawlers parse all content in the DOM — they see this as 8 identical blocks of duplicate content on one page.</li>
+      <li>This is a known thin content / keyword stuffing pattern that triggers quality filters.</li>
+      <li>Pages with large amounts of duplicated in-page content receive lower quality scores from automated ad review systems.</li>
+    </ul>
+    <div class="fix-box">
+      <p><strong>Fix:</strong> Use JavaScript to show/hide tabs rather than rendering all content in the DOM at once. Each tab should only load its content when selected. If using static HTML, each tab should show different, genuinely genre-appropriate games — not the same 5 entries repeated 8 times.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-critical">Critical</span>
+    <span class="issue-title">C-07 — No Verified robots.txt or XML Sitemap Accessible</span>
+  </div>
+  <div class="issue-body">
+    <div class="label">Description</div>
+    <p>Attempts to access <code>studioz-game.com/robots.txt</code> and <code>studioz-game.com/sitemap.xml</code> returned errors or could not be confirmed. Given that canonicals point to GitHub Pages, search engine crawlers may be confused about the authoritative domain for both files.</p>
+    <div class="label">Why This is Critical</div>
+    <ul>
+      <li>Google Search Console requires a verifiable sitemap to be submitted and accessible for property verification.</li>
+      <li>Without a proper robots.txt, crawlers cannot receive guidance on which pages to index — including the noindex'd pages that need to be cleaned up.</li>
+      <li>Absence of these files is flagged as a technical issue during AdSense application review.</li>
+    </ul>
+    <div class="fix-box">
+      <p><strong>Fix:</strong> Ensure <code>https://studioz-game.com/robots.txt</code> returns a valid robots.txt file pointing to <code>https://studioz-game.com/sitemap.xml</code>. Create and submit an XML sitemap listing all indexable pages (excluding noindex pages) to Google Search Console. Verify the GSC property under the live domain, not the GitHub subdomain.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="high">
+<h2 class="section-title">4. High Severity Issues</h2>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-high">High</span>
+    <span class="issue-title">H-01 — Game Review Pages Are Thin / Incomplete Content</span>
+  </div>
+  <div class="issue-body">
+    <p>The review page for <em>The Clockwork Mansion</em> (a fictional game) contains a two-sentence description and a placeholder image gallery using unrelated images (<code>hollow_knight_image.jpg</code> in a Clockwork Mansion review). There is no actual review text, scoring criteria, pros/cons, or gameplay analysis. This pattern likely applies to other review pages.</p>
+    <div class="label">Fix</div>
+    <div class="fix-box">
+      <p>Either populate every review page with substantive content (500+ words minimum for AdSense), or remove stub/thin pages entirely. Do not submit pages with fewer than 300 words of meaningful content to AdSense for review.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-high">High</span>
+    <span class="issue-title">H-02 — Inline Affiliate Disclosure Missing on Article Pages</span>
+  </div>
+  <div class="issue-body">
+    <p>Affiliate link disclosure is only present in the Terms & Conditions page. FTC (US), ASA (UK), and similar regulators in Canada (where the company claims to be based) require that affiliate disclosures appear clearly and conspicuously on the specific page containing affiliate links — not buried in a separate legal document. No inline disclosure was found on any article, review, or walkthrough page reviewed.</p>
+    <div class="fix-box">
+      <p>Add a visible affiliate disclosure at the top of every page containing affiliate/commission links, e.g.: <em>"Some links on this page are affiliate links. If you click and purchase, we may earn a commission at no extra cost to you."</em> This is also required by Google's Publisher Policies for AdSense.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-high">High</span>
+    <span class="issue-title">H-03 — Contact Page "Operating Hours" Text is Misleading/Nonsensical</span>
+  </div>
+  <div class="issue-body">
+    <p>The Contact page states: <em>"Open daily — check our website for current hours and event schedules."</em> This is a website, not a physical venue. This type of text is associated with template-generated sites and signals to reviewers that the site was not thoughtfully built by a genuine editorial team. It also falsely implies a physical premises with visitor hours.</p>
+    <div class="fix-box">
+      <p>Replace with something accurate, e.g.: <em>"Our editorial team responds to messages within 1–3 business days."</em> or simply remove the operating hours field from the contact page.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-high">High</span>
+    <span class="issue-title">H-04 — No Schema Markup / Structured Data on Any Page</span>
+  </div>
+  <div class="issue-body">
+    <p>No JSON-LD structured data was detected on the homepage, article pages, review pages, or walkthroughs. For a gaming review site, the absence of schema markup (Review, Article, VideoGame, FAQPage, BreadcrumbList) significantly limits search visibility, rich result eligibility, and the ability for ad systems to understand page context.</p>
+    <div class="fix-box">
+      <p>Implement JSON-LD schema on all relevant page types: <code>Article</code> on news/articles, <code>Review</code> with <code>ratingValue</code> on review pages, <code>VideoGame</code> on game database entries, <code>FAQPage</code> on FAQ sections, <code>BreadcrumbList</code> sitewide. Test with Google's Rich Results Test tool after implementation.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-high">High</span>
+    <span class="issue-title">H-05 — Walkthrough Pages May Contain Copyright-Infringing Game Screenshots</span>
+  </div>
+  <div class="issue-body">
+    <p>The Hollow Knight and Indiana Jones walkthrough/review pages reference game screenshots from third-party titles. Without explicit permission from developers (Team Cherry, MachineGames/Lucasfilm) or documented use of a fair use/editorial commentary exemption, this creates IP risk. Many ad networks and hosting providers have strict copyright compliance policies.</p>
+    <div class="fix-box">
+      <p>Ensure all game screenshots are either (a) taken from official press kits / media assets that explicitly allow editorial use, (b) original captures with documented fair use commentary context, or (c) replaced with original graphics. Add image credits/attribution where applicable.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-high">High</span>
+    <span class="issue-title">H-06 — FAQ Section on Homepage Contains Evasive / Thin Answers</span>
+  </div>
+  <div class="issue-body">
+    <p>The homepage FAQ section contains questions like "What are the most well-known adventure game developers?" and "Which adventure games are the most popular right now?" — answered with vague non-answers like "Several highly anticipated titles are set to launch... check our Latest News section." These are pattern-matched as AI-generated filler content by Google's quality systems.</p>
+    <div class="fix-box">
+      <p>Either remove the FAQ section or replace with specific, genuinely useful answers. For example, "Most well-known developers" should name actual studios (Amanita Design, Telltale, Cyan, etc.) with specific game examples. Vague redirections in FAQ answers are a negative quality signal.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="medium">
+<h2 class="section-title">5. Medium Severity Issues</h2>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-medium">Medium</span>
+    <span class="issue-title">M-01 — Cookie Consent Banner Fires After Age Gate (Wrong Order)</span>
+  </div>
+  <div class="issue-body">
+    <p>The cookie consent banner should be the first thing users see — before any cookies are set and before any other interstitial. Currently the age gate appears first, and the cookie consent banner appears after (or simultaneously). Under GDPR/PECR, cookies cannot be set until consent is given. The current sequence may violate this requirement.</p>
+    <div class="fix-box">
+      <p>Ensure the cookie consent banner fires before the age gate and before any analytics/tracking cookies are set. If using Google Analytics or any ad tracking, defer initialisation until consent is confirmed.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-medium">Medium</span>
+    <span class="issue-title">M-02 — Privacy Policy Email Address is Obfuscated/Hidden from Scrapers</span>
+  </div>
+  <div class="issue-body">
+    <p>The Privacy Policy and Contact page display email addresses through Cloudflare's email obfuscation (rendered as <code>[email protected]</code> in raw HTML). While this protects against spam scrapers, it can prevent automated ad-network reviewers from verifying the contact email exists and belongs to the site.</p>
+    <div class="fix-box">
+      <p>Consider adding a plain-text version of the domain-based email (e.g., <code>privacy@studioz-game.com</code>) as a secondary option, or ensure that Cloudflare's decoding works correctly for automated reviewers. At minimum, verify that the email renders correctly in browsers and is a functioning inbox.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-medium">Medium</span>
+    <span class="issue-title">M-03 — About Us Page Lacks Named Team Members and Publication History</span>
+  </div>
+  <div class="issue-body">
+    <p>The About Us page claims the site was "Launched in 2012" in the footer blurb, but the About page itself says nothing about founding date, team size, or history. More importantly, there is no editor-in-chief, editorial director, or any named individual taking editorial responsibility for the site.</p>
+    <div class="fix-box">
+      <p>Add a "Meet the Team" section with at least 2–3 real named contributors, their roles, and brief bios. Include the actual founding date if it is genuine. If the site was not actually founded in 2012, remove or correct this claim — false founding date claims are a red flag for reviewers.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-medium">Medium</span>
+    <span class="issue-title">M-04 — Inconsistent URL Structure (.html Extension vs Clean URLs)</span>
+  </div>
+  <div class="issue-body">
+    <p>One article URL was found with a <code>.html</code> extension: <code>/best-point-and-click-adventure-games-to-play-right-now.html</code> while all other pages use clean extensionless URLs. This inconsistency creates potential duplicate content issues and signals an inconsistent CMS/build process.</p>
+    <div class="fix-box">
+      <p>Standardise all URLs to use clean extensionless format. Set up a 301 redirect from the .html version to the clean URL, and update any internal links pointing to the .html version.</p>
+    </div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-medium">Medium</span>
+    <span class="issue-title">M-05 — Indiana Jones Article Contains Factual Inaccuracy</span>
+  </div>
+  <div class="issue-body">
+    <p>The Indiana Jones and the Great Circle FAQ states: <em>"What platforms is it available on? Xbox Series X|S, PC (Windows), and PlayStation 5."</em> However, earlier in the same article it states the game is available on "PC and Xbox Series X|S." The PS5 addition in the FAQ contradicts the body copy and the game's actual original release (which was Xbox/PC first, with PS5 added later). More critically, the article header says "Updated June 2026" but does not reflect whether the PS5 version launch date has been confirmed.</p>
+    <div class="fix-box">
+      <p>Verify all factual claims against official sources. Fix the internal contradiction between the article body and the FAQ. Add accurate release date information for each platform. For a "review" site, factual inaccuracies damage E-E-A-T and editorial credibility.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="low">
+<h2 class="section-title">6. Low Severity Issues</h2>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-low">Low</span>
+    <span class="issue-title">L-01 — Internal Link Error: The Wanderer Links to /the-clockwork-mansion</span>
+  </div>
+  <div class="issue-body">
+    <p>In the "Top Adventure Games" carousel (Narrative tab), the card for "The Wanderer" links to <code>/the-clockwork-mansion</code> instead of <code>/the-wanderer</code>. This is a broken internal link creating a confusing user experience.</p>
+    <div class="fix-box"><p>Audit all internal links in the game carousels. Fix The Wanderer link to point to its correct URL. Use a broken link checker tool to identify all similar errors sitewide.</p></div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-low">Low</span>
+    <span class="issue-title">L-02 — No Social Media Presence Linked from the Site</span>
+  </div>
+  <div class="issue-body">
+    <p>The footer and About page contain no links to any social media profiles (Twitter/X, Facebook, Instagram, YouTube). For an editorial site claiming to have been established since 2012, the complete absence of social media presence is an E-E-A-T red flag.</p>
+    <div class="fix-box"><p>Create and link active social media profiles, or acknowledge clearly if the site does not maintain social accounts. Even a statement like "We focus on longform content over social media" is better than no acknowledgment.</p></div>
+  </div>
+</div>
+
+<div class="issue-card">
+  <div class="issue-header">
+    <span class="badge badge-low">Low</span>
+    <span class="issue-title">L-03 — "Studioz Game Database" Referenced in FAQ but Not Findable on the Site</span>
+  </div>
+  <div class="issue-body">
+    <p>The homepage FAQ references "The Studioz Game Database" as a comprehensive game catalogue with ratings and community support. No such database page is accessible from the navigation or any page reviewed. This is either a phantom feature or an unlinked section, both of which are negative user experience signals.</p>
+    <div class="fix-box"><p>Either build and link the database, or remove the FAQ entry referencing it. Promising features that do not exist damages credibility with both users and platform reviewers.</p></div>
+  </div>
+</div>
+</div>
+
+<div id="positives">
+<h2 class="section-title">7. Positive Findings</h2>
+<p>The following elements are implemented correctly and should be preserved:</p>
+<ul class="checklist">
+  <li class="check-pass">HTTPS enabled sitewide via Cloudflare — SSL certificate valid.</li>
+  <li class="check-pass">Privacy Policy page is present, detailed, and covers GDPR, PIPEDA, cookie policy, affiliate tracking, and third-party services. This is well above average for a gaming site.</li>
+  <li class="check-pass">Terms & Conditions page includes affiliate link disclosure — a positive signal for ad networks.</li>
+  <li class="check-pass">Physical address (Vancouver, BC) and phone number are present in the footer and Contact page — important trust signals for ad network verification.</li>
+  <li class="check-pass">Cookie consent banner is present (though needs timing/order fixes).</li>
+  <li class="check-pass">Real game coverage exists (Hollow Knight, Palworld, Indiana Jones, Balatro) — this content is genuine and valuable.</li>
+  <li class="check-pass">Viewport meta tag is set correctly for mobile responsiveness.</li>
+  <li class="check-pass">Open Graph and Twitter Card meta tags are present (though URLs need fixing).</li>
+  <li class="check-pass">The Hollow Knight walkthrough is substantive, well-structured, and demonstrates real game knowledge.</li>
+  <li class="check-pass">Navigation is clean and clear with logical section structure (News, Reviews, Articles, Walkthroughs).</li>
+</ul>
+</div>
+
+<div id="priority">
+<h2 class="section-title">8. Prioritised Fix Roadmap</h2>
+<table class="priority-table">
+  <thead>
+    <tr><th>Priority</th><th>Issue</th><th>Effort</th><th>Timeline</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><span class="badge badge-critical">1</span></td><td>Fix all canonical URLs to point to studioz-game.com (C-01)</td><td>Low — find/replace in build config</td><td>Day 1</td></tr>
+    <tr><td><span class="badge badge-critical">2</span></td><td>Fix all OG/Twitter image URLs to live domain (C-01 related)</td><td>Low</td><td>Day 1</td></tr>
+    <tr><td><span class="badge badge-critical">3</span></td><td>Remove or scope the age gate — not on legal/informational pages (C-02)</td><td>Low</td><td>Day 1–2</td></tr>
+    <tr><td><span class="badge badge-critical">4</span></td><td>Remove/fix noindex tags on all public content pages (C-04)</td><td>Low — configuration change</td><td>Day 1–2</td></tr>
+    <tr><td><span class="badge badge-critical">5</span></td><td>Verify robots.txt and submit sitemap to Google Search Console (C-07)</td><td>Low–Medium</td><td>Day 2–3</td></tr>
+    <tr><td><span class="badge badge-critical">6</span></td><td>Fix carousel duplicate content — JS show/hide or populate with unique games (C-06)</td><td>Medium</td><td>Week 1</td></tr>
+    <tr><td><span class="badge badge-critical">7</span></td><td>Audit and address fictional game content (C-03)</td><td>High — content work</td><td>Week 2–4</td></tr>
+    <tr><td><span class="badge badge-high">8</span></td><td>Add real author bio pages + headshots for all named writers (C-05, H-06)</td><td>Medium</td><td>Week 2</td></tr>
+    <tr><td><span class="badge badge-high">9</span></td><td>Add inline affiliate disclosures to all article pages (H-02)</td><td>Low</td><td>Week 1</td></tr>
+    <tr><td><span class="badge badge-high">10</span></td><td>Fix Contact page "operating hours" text (H-03)</td><td>Very low</td><td>Day 1</td></tr>
+    <tr><td><span class="badge badge-high">11</span></td><td>Implement JSON-LD schema markup on all page types (H-04)</td><td>Medium–High</td><td>Week 3</td></tr>
+    <tr><td><span class="badge badge-high">12</span></td><td>Clarify screenshot copyright status on walkthrough pages (H-05)</td><td>Medium</td><td>Week 2</td></tr>
+    <tr><td><span class="badge badge-medium">13</span></td><td>Fix cookie consent order — fire before age gate (M-01)</td><td>Low–Medium</td><td>Week 1</td></tr>
+    <tr><td><span class="badge badge-medium">14</span></td><td>Verify email address rendering with obfuscation (M-02)</td><td>Low</td><td>Week 1</td></tr>
+    <tr><td><span class="badge badge-medium">15</span></td><td>Add named team members to About Us (M-03)</td><td>Medium</td><td>Week 2</td></tr>
+    <tr><td><span class="badge badge-medium">16</span></td><td>Standardise URL format (remove .html extension, add 301 redirect) (M-04)</td><td>Low</td><td>Week 1</td></tr>
+    <tr><td><span class="badge badge-medium">17</span></td><td>Fix Indiana Jones article factual inaccuracy (M-05)</td><td>Very low</td><td>Day 1</td></tr>
+    <tr><td><span class="badge badge-low">18</span></td><td>Fix broken internal link: The Wanderer → The Clockwork Mansion (L-01)</td><td>Very low</td><td>Day 1</td></tr>
+    <tr><td><span class="badge badge-low">19</span></td><td>Add social media links or statement (L-02)</td><td>Low</td><td>Week 2</td></tr>
+    <tr><td><span class="badge badge-low">20</span></td><td>Build or remove "Studioz Game Database" reference (L-03)</td><td>Medium</td><td>Week 3–4</td></tr>
+    <tr><td><span class="badge badge-high">21</span></td><td>Expand thin review/stub pages to 500+ words (H-01)</td><td>High — content work</td><td>Ongoing</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div id="conclusion">
+<h2 class="section-title">9. Conclusion</h2>
+<p>studioz-game.com has a solid structural foundation — HTTPS, contact details, legal pages, cookie consent, and a clean design — but it currently has several fundamental technical and content issues that would result in immediate rejection by Google AdSense and most advertising/affiliate networks.</p>
+<p>The two most urgent issues to resolve are the broken canonical URL configuration (which affects the entire site's search indexability) and the presence of a large volume of fictional game content presented as genuine news and reviews. Both of these issues directly contradict the core policies of every major ad and affiliate network.</p>
+<p>Once the critical and high-severity issues are addressed, the site has genuine potential — there is real, substantive gaming content (Hollow Knight walkthrough, Indiana Jones review, Palworld guide) that demonstrates editorial capability. The goal should be to expand this type of real, expert content while eliminating the fictional game entries, and to establish clear author identities that Google and ad reviewers can verify.</p>
+<p><strong>Recommended resubmission timeline:</strong> Allow a minimum of 4 weeks after completing all Critical and High-severity fixes before resubmitting to any ad network. This gives Google's crawlers time to re-index the corrected content and for the domain to build appropriate trust signals.</p>
+</div>
+
+</div>
+
+<footer>
+  <p>Audit conducted by Claude (Anthropic) &nbsp;|&nbsp; Date: June 16, 2026 &nbsp;|&nbsp; Domain audited: studioz-game.com &nbsp;|&nbsp; This report is based on publicly accessible content and should be supplemented with Google Search Console and Analytics data for a complete picture.</p>
+  <p style="margin-top:6px;">This report covers AdSense, Ad Manager, Google Search Console, hosting provider, and affiliate network compliance signals. It does not constitute legal advice. Consult a qualified privacy/legal professional for GDPR and PIPEDA compliance matters.</p>
+</footer>
+
+</body>
+</html>
