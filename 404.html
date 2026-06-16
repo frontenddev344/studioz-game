@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.1">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <title>404 - Page Not Found</title>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-container">
+                <button class="menu-toggle" id="menuOpenBtn" aria-label="Open Menu">
+                    <img src="./assets/images/menu.png" alt="menu_btn">
+                </button>
+                <nav class="desktop-nav nav-left">
+                    <a href="./news" class="nav-item">News</a>
+                    <a href="./reviews" class="nav-item">Reviews</a>
+                    <a href="./articles" class="nav-item">Articles</a>
+
+                </nav>
+                <div class="brand-logo">
+                    <a href="./">
+                        <img src="./assets/images/logo.png" alt=" Logo">
+                    </a>
+                </div>
+                <nav class="desktop-nav nav-right">
+                    <a href="./walkthroughs" class="nav-item">Walkthroughs</a>
+                    <a href="about-us" class="nav-item ">About Us</a>
+                    <a href="./contact-us" class="nav-item">Contact Us</a>
+                </nav>
+                <button class="search-toggle-btn" id="searchExpandBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+                <div class="search-overlay-bar" id="searchBarContainer">
+                    <div class="search-bar-inner">
+                        <div class="search-input-wrapper">
+                            <i class="fa-solid fa-magnifying-glass search-field-icon"></i>
+                            <input type="text" id="searchInput" placeholder="Search your Adventure Game..."
+                                autocomplete="off">
+                        </div>
+                        <button class="search-cancel-btn" id="searchCancelBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-panel-view active" id="mobileMainPanel">
+            <div class="mobile-menu-header">
+                <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">
+                    <img src="./assets/images/close.png" alt="close_btn">
+                </button>
+                <div class="mobile-menu-logo">
+                    <img src="./assets/images/logo.png" alt="Adventure Gamers Logo">
+                </div>
+                <button class="search-toggle-btn" id="mobileSearchBtn" aria-label="Open Search">
+                    <img src="./assets/images/search.png" alt="search_icon">
+                </button>
+            </div>
+
+            <nav class="mobile-nav-links">
+                <a href="./news" class="mobile-link">News</a>
+                <a href="./reviews" class="mobile-link">Reviews</a>
+                <a href="articles" class="mobile-link">Articles</a>
+                <a href="walkthroughs" class="mobile-link">Walkthroughs</a>
+                <a href="about-us" class="mobile-link">About Us</a>
+                <a href="contact-us" class="mobile-link">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <div class="error-container bg_dark py-7">
+        <div class="container">
+            <div class="error-card">
+
+                <!-- Logo -->
+                <div class="logo-wrapper">
+                    <img src="./assets/images/logo.png" alt="Company Logo" class="logo">
+                </div>
+
+                <span class="status-badge">ERROR 404</span>
+
+                <h1>404</h1>
+
+                <h2>Page Not Found</h2>
+
+                <p>
+                    The page you're looking for doesn't exist,
+                    was moved, or never existed in the first place.
+                </p>
+
+                <div class="actions">
+                    <button onclick="goBack()" class="btn-secondary">
+                        Go Back
+                    </button>
+
+                    <a href="/" class="btn-primary">
+                        Return Home
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="site-footer pt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href="./" class="bg_center_contain"></a>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Quick Links
+                        </h3>
+                        <ul>
+                            <li><a href="./news">News</a></li>
+                            <li><a href="./reviews">Reviews</a></li>
+                            <li><a href="articles">Articles</a></li>
+                            <li><a href="walkthroughs">Walkthroughs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Other Links
+                        </h3>
+                        <ul>
+                            <li><a href="about-us">About Us</a></li>
+                            <li><a href="./terms-conditions">Terms & Conditions </a></li>
+                            <li><a href="./privacy-policy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>
+                            Get in Touch
+                        </h3>
+                        <p class="mb-3">
+                            Have questions about our products? We’re here to help.
+                        </p>
+                        <p class="text_theme mb-2">
+                            Phone
+                        </p>
+                        <p class="mb-3 text_white">
+                            <a href="tel:+17788970544">+1 778-897-0544</a>
+                        </p>
+                        <p class="text_theme mb-2">
+                            Address
+                        </p>
+                        <p class="text_white">
+                            <a href="https://maps.app.goo.gl/bbmBLiC5b71tKLVC6">225 W 8th Ave, Suite 300
+                                Vancouver, BC V5Y 1N3
+                                Canada</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-disclaimer">
+                    <div class="age-icon">
+                        <img src="assets/images/eighteen_plus.png" alt="18+ Only">
+                    </div>
+
+                    <h3>Responsible Gaming</h3>
+
+
+                    <p>
+                        <span class="theme">Studioz Game</span> is intended for users aged 18 years or older.
+                        By using this website, you confirm that you meet the legal age
+                        requirements in your jurisdiction.
+                    </p>
+
+                    <p>
+                        Gambling and gaming activities involve risk and may result in
+                        financial loss. Please play responsibly and never wager more than
+                        you can afford to lose.
+                    </p>
+
+                    <p>
+                        We do not guarantee winnings or profits. Users are responsible
+                        for ensuring that participation in online gaming activities is
+                        legal in their location.
+                    </p>
+
+                    <!-- Responsible Gambling Resources -->
+                    <div class="responsible-resources">
+                        <h4>Need Help?</h4>
+                        <p>
+                            If gambling is becoming a problem, support is available from the
+                            following independent organisations:
+                        </p>
+
+                        <ul class="responsible-links">
+                            <li>
+                                <a href="https://www.responsiblegambling.org/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Responsible Gambling Council
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.connexontario.ca/" target="_blank" rel="noopener noreferrer">
+                                    ConnexOntario
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.problemgambling.ca/" target="_blank" rel="noopener noreferrer">
+                                    Problem Gambling Institute of Ontario
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.gamblingtherapy.org/" target="_blank" rel="noopener noreferrer">
+                                    Gambling Therapy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="responsible-badges">
+                        <span>🔞 18+ Only</span>
+                        <span>Play Responsibly</span>
+                        <span>Gaming Involves Risk</span>
+                    </div>
+                </div>
+
+                <div class="footer-legal-disclaimer">
+                    <h3 class="text_theme mb-3">
+                        Disclaimer:
+                    </h3>
+                    <p>
+                        Studioz Game is an independent gaming website and is not affiliated
+                        with, endorsed by, or sponsored by Sony Interactive Entertainment, PlayStation, or any game
+                        publisher unless explicitly stated. All trademarks, logos, and brand names are the property of
+                        their respective owners.
+                    </p>
+                </div>
+
+
+                <div class="footer-bottom">
+                    <p>Copyright © 2026 <a class="text_theme" href="./"> studioz-game.com </a> All Rights Reserved.</p>
+                    <div class="ssl_logo">
+                        <div class="ssl_logo_inner bg-contain" style="background-image: url(assets/images/ssl.png);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+
+    <button id="topBtn" class="show">
+        ↑
+    </button>
+
+    <script src="./assets/js/jquery.js"></script>
+    <script>
+        document.getElementById('walkthroughSearch').addEventListener('keyup', function () {
+            let filter = this.value.toLowerCase();
+            let sections = document.querySelectorAll('.walkthrough_sections');
+
+            sections.forEach(section => {
+                let cards = section.querySelectorAll('.walkthrough_cards');
+                let hasVisibleCards = false;
+
+                cards.forEach(card => {
+                    let text = card.textContent.toLowerCase();
+                    if (text.includes(filter)) {
+                        card.style.display = "";
+                        hasVisibleCards = true;
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+                section.style.display = hasVisibleCards ? "" : "none";
+            });
+        });
+    </script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/filters-data.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/render.js"></script>
+    <script src="./assets/js/filters.js"></script>
+    <script src="./assets/js/pagination.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>

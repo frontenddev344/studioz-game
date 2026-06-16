@@ -143,26 +143,38 @@ document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
 });
 
-// Home Videos JS  End
+// 404 JS Start
+function goBack() {
+  if (window.history.length > 1) {
+      window.history.back();
+  } else {
+      window.location.href = "/";
+  }
+}
 
-// News Filter JS Start
-// function filterCards(category, btn) {
-//   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-//   btn.classList.add('active');
 
+let seconds = 10;
 
-//   const cards = document.querySelectorAll('.news_card');
-  
-//   cards.forEach(card => {
-//       if (category === 'all' || card.classList.contains(category)) {
-//           card.style.display = 'block';
-//       } else {
-//           card.style.display = 'none';
-//       }
-//   });
-// }
+const countdown = document.getElementById("countdown");
 
-// News Filter JS End
+const timer = setInterval(() => {
+
+  seconds--;
+
+  countdown.textContent = seconds;
+
+  if (seconds <= 0) {
+      clearInterval(timer);
+      window.location.href = "/";
+  }
+
+}, 1000);
+
+// Optional Logging
+
+console.warn(
+  "404 Error: User attempted to access a missing page."
+);
 
 
 
