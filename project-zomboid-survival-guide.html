@@ -538,5 +538,27 @@
     <script src="./assets/js/app.js"></script>
     <script src="./assets/js/bootstrap.js"></script>
     <script src="./assets/js/index.js"></script>
-  </body>
+  
+    <!-- Age Verification Banner (AdSense-safe) -->
+    <div id="ageBanner" class="age-banner" style="display:none;">
+        <p>This site covers <strong>mature-rated games</strong> (18+) including violence, strong language, and complex themes. By continuing you confirm you are 18 or older.</p>
+        <div class="age-banner-actions">
+            <button class="age-banner-confirm" id="ageBannerConfirm">I am 18+ — Enter</button>
+            <a href="https://www.google.com" class="age-banner-decline" id="ageBannerDecline">Leave</a>
+        </div>
+    </div>
+    <script>
+    (function(){
+        var banner = document.getElementById('ageBanner');
+        if (!banner) return;
+        if (localStorage.getItem('ageOk') === '1') { return; }
+        banner.style.display = 'flex';
+        document.body.classList.add('age-banner-visible');
+        document.getElementById('ageBannerConfirm').addEventListener('click', function(){
+            localStorage.setItem('ageOk','1');
+            banner.style.display = 'none';
+            document.body.classList.remove('age-banner-visible');
+        });
+    })();
+    </script></body>
 </html>

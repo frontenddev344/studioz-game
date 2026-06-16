@@ -10,20 +10,17 @@
     <link rel="stylesheet" href="assets/css/style.css?v=1.1">
     <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="canonical" href="https://frontenddev344.github.io/studioz-game/poker-night-at-the-inventory">
-    <meta name="description" content="Read about Poker Night at the Inventory Preview – A Wild Poker Showdown Between
-        Gaming Icons on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta name="description" content="Poker Night at the Inventory is a single-player comedy card game featuring iconic gaming characters. Read our full review and preview on Studioz Game.">
     <meta property="og:title" content="Poker Night at the Inventory Preview – A Wild Poker Showdown Between
         Gaming Icons">
-    <meta property="og:description" content="Read about Poker Night at the Inventory Preview – A Wild Poker Showdown Between
-        Gaming Icons on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta property="og:description" content="Poker Night at the Inventory is a single-player comedy card game featuring iconic gaming characters. Read our full review and preview on Studioz Game.">
     <meta property="og:url" content="https://frontenddev344.github.io/studioz-game/poker-night-at-the-inventory">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://frontenddev344.github.io/studioz-game/assets/images/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Poker Night at the Inventory Preview – A Wild Poker Showdown Between
         Gaming Icons">
-    <meta name="twitter:description" content="Read about Poker Night at the Inventory Preview – A Wild Poker Showdown Between
-        Gaming Icons on Studioz Game - adventure and strategy gaming reviews, walkthroughs, and news.">
+    <meta name="twitter:description" content="Poker Night at the Inventory is a single-player comedy card game featuring iconic gaming characters. Read our full review and preview on Studioz Game.">
     <meta name="twitter:image" content="https://frontenddev344.github.io/studioz-game/assets/images/logo.png">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <title>Poker Night at the Inventory Preview – A Wild Poker Showdown Between
@@ -129,6 +126,13 @@
     <!-- Banner End -->
 
 
+    
+    <!-- Gambling Content Disclaimer -->
+    <div class="container">
+        <div class="gambling-disclaimer">
+            <strong>Video Game Review Notice:</strong> This page reviews a video game that features casino-themed mechanics as part of its gameplay. Studioz Game does not promote, endorse, or facilitate real-money gambling. No real money is involved in the games reviewed on this site.
+        </div>
+    </div>
     <!-- Articles Details Content Start -->
     <section class="article-detail-page py-7">
         <div class="container">
@@ -137,6 +141,10 @@
                 <!-- INTRO -->
 
                 <div class="article-detail-page__intro">
+                <div class="article-author">
+                    <div class="author-avatar">SG</div>
+                    <div><strong>Studioz Game Editorial Team</strong> &nbsp;·&nbsp; Gaming Reviewer &nbsp;·&nbsp; <span>Updated June 2026</span></div>
+                </div>
 
                     <p>
                         Few games manage to turn a simple poker match into a full comedy
@@ -649,6 +657,28 @@
     <script src="./assets/js/bootstrap.js"></script>
     <script src="./assets/js/index.js"></script>
 
-</body>
+
+    <!-- Age Verification Banner (AdSense-safe) -->
+    <div id="ageBanner" class="age-banner" style="display:none;">
+        <p>This site covers <strong>mature-rated games</strong> (18+) including violence, strong language, and complex themes. By continuing you confirm you are 18 or older.</p>
+        <div class="age-banner-actions">
+            <button class="age-banner-confirm" id="ageBannerConfirm">I am 18+ — Enter</button>
+            <a href="https://www.google.com" class="age-banner-decline" id="ageBannerDecline">Leave</a>
+        </div>
+    </div>
+    <script>
+    (function(){
+        var banner = document.getElementById('ageBanner');
+        if (!banner) return;
+        if (localStorage.getItem('ageOk') === '1') { return; }
+        banner.style.display = 'flex';
+        document.body.classList.add('age-banner-visible');
+        document.getElementById('ageBannerConfirm').addEventListener('click', function(){
+            localStorage.setItem('ageOk','1');
+            banner.style.display = 'none';
+            document.body.classList.remove('age-banner-visible');
+        });
+    })();
+    </script></body>
 
 </html>

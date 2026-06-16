@@ -6456,3 +6456,77 @@ form#contactForm small {
 
 
 /* 404 CSS End */
+/* ── Age Verification Banner (AdSense-safe top banner) ── */
+.age-banner {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 999999;
+    background: #0a0a0a;
+    border-bottom: 2px solid #00d084;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.age-banner p {
+    color: #e2e8f0;
+    font-size: 13px;
+    margin: 0;
+    text-align: center;
+}
+.age-banner strong { color: #00d084; }
+.age-banner-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.age-banner-confirm {
+    background: #00d084;
+    color: #000;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.age-banner-decline {
+    background: transparent;
+    color: #94a3b8;
+    border: 1px solid #2d3348;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.age-banner-decline:hover { color: #e2e8f0; }
+body.age-banner-visible { padding-top: 68px; }
+/* ── Gambling content disclaimer ── */
+.gambling-disclaimer {
+    background: #1e2130;
+    border-left: 4px solid #f97316;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    margin: 16px 0 24px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+.gambling-disclaimer strong { color: #fdba74; }
+/* ── Author byline ── */
+.article-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #64748b;
+    font-size: 13px;
+}
+.article-author .author-avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: #00d084;
+    display: flex; align-items: center; justify-content: center;
+    color: #000; font-weight: 700; font-size: 13px; flex-shrink: 0;
+}
+.article-author strong { color: #94a3b8; }

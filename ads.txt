@@ -1,0 +1,2 @@
+﻿# ads.txt - Authorised Digital Sellers
+# Add your Google AdSense publisher ID here when your account is approved

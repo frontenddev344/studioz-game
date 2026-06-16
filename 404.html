@@ -1,10 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="Page not found — Studioz Game. Return to our homepage to find game reviews, walkthroughs, and gaming news.">
+    <link rel="canonical" href="https://frontenddev344.github.io/studioz-game/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="404 Page Not Found — Studioz Game">
+    <meta property="og:description" content="Page not found. Return to Studioz Game for game reviews, walkthroughs, and gaming news.">
+    <meta property="og:url" content="https://frontenddev344.github.io/studioz-game/">
+    <meta property="og:image" content="https://frontenddev344.github.io/studioz-game/assets/images/logo.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="404 Page Not Found — Studioz Game">
+    <meta name="twitter:description" content="Page not found. Return to Studioz Game for game reviews, walkthroughs, and gaming news.">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/style.css?v=1.1">
@@ -19,7 +29,7 @@
         <div class="container">
             <div class="nav-container">
                 <button class="menu-toggle" id="menuOpenBtn" aria-label="Open Menu">
-                    <img src="./assets/images/menu.png" alt="menu_btn">
+                    <img loading="lazy" src="./assets/images/menu.png" alt="menu_btn">
                 </button>
                 <nav class="desktop-nav nav-left">
                     <a href="./news" class="nav-item">News</a>
@@ -29,7 +39,7 @@
                 </nav>
                 <div class="brand-logo">
                     <a href="./">
-                        <img src="./assets/images/logo.png" alt=" Logo">
+                        <img loading="lazy" src="./assets/images/logo.png" alt=" Logo">
                     </a>
                 </div>
                 <nav class="desktop-nav nav-right">
@@ -38,7 +48,7 @@
                     <a href="./contact-us" class="nav-item">Contact Us</a>
                 </nav>
                 <button class="search-toggle-btn" id="searchExpandBtn" aria-label="Open Search">
-                    <img src="./assets/images/search.png" alt="search_icon">
+                    <img loading="lazy" src="./assets/images/search.png" alt="search_icon">
                 </button>
                 <div class="search-overlay-bar" id="searchBarContainer">
                     <div class="search-bar-inner">
@@ -57,13 +67,13 @@
         <div class="mobile-panel-view active" id="mobileMainPanel">
             <div class="mobile-menu-header">
                 <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close Menu">
-                    <img src="./assets/images/close.png" alt="close_btn">
+                    <img loading="lazy" src="./assets/images/close.png" alt="close_btn">
                 </button>
                 <div class="mobile-menu-logo">
-                    <img src="./assets/images/logo.png" alt="Adventure Gamers Logo">
+                    <img loading="lazy" src="./assets/images/logo.png" alt="Adventure Gamers Logo">
                 </div>
                 <button class="search-toggle-btn" id="mobileSearchBtn" aria-label="Open Search">
-                    <img src="./assets/images/search.png" alt="search_icon">
+                    <img loading="lazy" src="./assets/images/search.png" alt="search_icon">
                 </button>
             </div>
 
@@ -86,7 +96,7 @@
 
                 <!-- Logo -->
                 <div class="logo-wrapper">
-                    <img src="./assets/images/logo.png" alt="Company Logo" class="logo">
+                    <img loading="lazy" src="./assets/images/logo.png" alt="Company Logo" class="logo">
                 </div>
 
                 <span class="status-badge">ERROR 404</span>
@@ -170,7 +180,7 @@
 
                 <div class="footer-disclaimer">
                     <div class="age-icon">
-                        <img src="assets/images/eighteen_plus.png" alt="18+ Only">
+                        <img loading="lazy" src="assets/images/eighteen_plus.png" alt="18+ Only">
                     </div>
 
                     <h3>Responsible Gaming</h3>
@@ -210,19 +220,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.connexontario.ca/" target="_blank" rel="noopener noreferrer">
-                                    ConnexOntario
-                                </a>
+                                
                             </li>
                             <li>
-                                <a href="https://www.problemgambling.ca/" target="_blank" rel="noopener noreferrer">
-                                    Problem Gambling Institute of Ontario
-                                </a>
+                                
                             </li>
                             <li>
-                                <a href="https://www.gamblingtherapy.org/" target="_blank" rel="noopener noreferrer">
-                                    Gambling Therapy
-                                </a>
+                                
                             </li>
                         </ul>
                     </div>
@@ -297,6 +301,28 @@
     <script src="./assets/js/bootstrap.js"></script>
     <script src="./assets/js/index.js"></script>
 
-</body>
+
+    <!-- Age Verification Banner (AdSense-safe) -->
+    <div id="ageBanner" class="age-banner" style="display:none;">
+        <p>This site covers <strong>mature-rated games</strong> (18+) including violence, strong language, and complex themes. By continuing you confirm you are 18 or older.</p>
+        <div class="age-banner-actions">
+            <button class="age-banner-confirm" id="ageBannerConfirm">I am 18+ — Enter</button>
+            <a href="https://www.google.com" class="age-banner-decline" id="ageBannerDecline">Leave</a>
+        </div>
+    </div>
+    <script>
+    (function(){
+        var banner = document.getElementById('ageBanner');
+        if (!banner) return;
+        if (localStorage.getItem('ageOk') === '1') { return; }
+        banner.style.display = 'flex';
+        document.body.classList.add('age-banner-visible');
+        document.getElementById('ageBannerConfirm').addEventListener('click', function(){
+            localStorage.setItem('ageOk','1');
+            banner.style.display = 'none';
+            document.body.classList.remove('age-banner-visible');
+        });
+    })();
+    </script></body>
 
 </html>
